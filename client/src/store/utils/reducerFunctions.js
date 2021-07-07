@@ -1,3 +1,12 @@
+export const addReverseConvoToStore = (state) => {
+  return state.map((convo) => {
+      const convoCopy = { ...convo};
+      convoCopy.messages.reverse()
+      console.log(convoCopy)
+      return convoCopy;
+  })
+}
+ 
 export const addMessageToStore = (state, payload) => {
   const { message, sender } = payload;
   // if sender isn't null, that means the message needs to be put in a brand new convo
@@ -15,7 +24,6 @@ export const addMessageToStore = (state, payload) => {
       const convoCopy = { ...convo};
       convoCopy.messages.unshift(message);
       convoCopy.latestMessageText = message.text;
-
       return convoCopy;
     } else {
       return convo;

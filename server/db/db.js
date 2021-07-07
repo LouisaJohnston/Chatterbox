@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 
-const db = new Sequelize("messenger", "LouisaLathamJohnston", process.env.LOCAL_PASSWORD, {
+const db = new Sequelize("messenger", process.env.LOCAL_USERNAME, process.env.LOCAL_PASSWORD, {
   host: "127.0.0.1",
   dialect: "postgres"
 })

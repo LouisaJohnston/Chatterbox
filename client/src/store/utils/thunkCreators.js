@@ -5,9 +5,9 @@ import {
   addConversation,
   setNewMessage,
   setSearchedUsers,
+  // setReverseMessages
 } from "../conversations";
 import { gotUser, setFetchingStatus } from "../user";
-
 
 axios.interceptors.request.use(async function (config) {
   const token = await localStorage.getItem("messenger-token");
@@ -78,6 +78,15 @@ export const fetchConversations = () => async (dispatch) => {
     console.error(error);
   }
 };
+
+// export const fetchMessages = () => async (dispatch) => {
+//   try {
+//     const { data } = await axios.get("/api/messages");
+//     dispatch(setReverseMessages(data))
+//   } catch (error) {
+//     console.error(error)
+//   }
+// }
 
 const saveMessage = async (body) => {
   const { data } = await axios.post("/api/messages", body);
