@@ -110,6 +110,12 @@ export const postMessage = (body) => async (dispatch) => {
   }
 };
 
+export const markSeen = (body) => async () => {
+  let options = {
+    
+  }
+}
+
 export const searchUsers = (searchTerm) => async (dispatch) => {
   try {
     const { data } = await axios.get(`/api/users/${searchTerm}`);

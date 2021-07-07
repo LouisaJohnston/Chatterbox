@@ -1,3 +1,4 @@
+import moment from "moment";
 import io from "socket.io-client";
 import store from "./store";
 import {
@@ -18,8 +19,14 @@ socket.on("connect", () => {
   socket.on("remove-offline-user", (id) => {
     store.dispatch(removeOfflineUser(id));
   });
+
   socket.on("new-message", (data) => {
     store.dispatch(setNewMessage(data.message, data.sender));
+    let options = {
+      messageId: data.message.id,
+      timetoken: moment().valueOf()
+    }
+    socket.emit("received", options)
   });
 });
 
