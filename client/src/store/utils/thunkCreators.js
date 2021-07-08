@@ -79,15 +79,6 @@ export const fetchConversations = () => async (dispatch) => {
   }
 };
 
-// export const fetchMessages = () => async (dispatch) => {
-//   try {
-//     const { data } = await axios.get("/api/messages");
-//     dispatch(setReverseMessages(data))
-//   } catch (error) {
-//     console.error(error)
-//   }
-// }
-
 const saveMessage = async (body) => {
   const { data } = await axios.post("/api/messages", body);
   return data;
