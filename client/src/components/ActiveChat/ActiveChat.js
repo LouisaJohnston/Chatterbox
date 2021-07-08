@@ -24,8 +24,6 @@ const ActiveChat = (props) => {
   const { user } = props;
   const conversation = props.conversation || {};
   const messages = props.messages || {};
-  console.log(conversation)
-  console.log(messages)
 
   return (
     <Box className={classes.root}>
@@ -37,7 +35,7 @@ const ActiveChat = (props) => {
           />
           <Box className={classes.chatContainer}>
             <Messages
-              messages={conversation.messages}
+              messages={messages}
               otherUser={conversation.otherUser}
               userId={user.id}
             />
@@ -54,7 +52,6 @@ const ActiveChat = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.conversations)
   return {
     user: state.user,
     conversation:
@@ -63,7 +60,7 @@ const mapStateToProps = (state) => {
         (conversation) => 
         conversation.otherUser.username === state.activeConversation
       ),
-    messages: state.activeConversation,
+    messages: state.reverseMessages,
   };
 };
 

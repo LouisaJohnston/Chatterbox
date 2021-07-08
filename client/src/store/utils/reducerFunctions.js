@@ -1,6 +1,5 @@
 export const addReverseConvoToStore = (messages) => {
   const newMessages = [...messages].reverse();
-  console.log(newMessages)
   return newMessages
 }
  
