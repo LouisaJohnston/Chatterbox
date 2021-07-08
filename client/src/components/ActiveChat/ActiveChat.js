@@ -1,4 +1,3 @@
-import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box } from "@material-ui/core";
 import { Input, Header, Messages } from "./index";
@@ -57,7 +56,8 @@ const mapStateToProps = (state) => {
     conversation:
       state.conversations &&
       state.conversations.find(
-        (conversation) => conversation.otherUser.username === state.activeConversation
+        (conversation) => 
+        conversation.otherUser.username === state.activeConversation
       )
   };
 };

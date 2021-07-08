@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { FormControl, FilledInput } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import { connect } from "react-redux";
@@ -18,6 +18,7 @@ const styles = {
 };
 
 class Input extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
