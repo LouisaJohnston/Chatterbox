@@ -1,10 +1,7 @@
-export const addReverseConvoToStore = (state) => {
-  return state.map((convo) => {
-      const convoCopy = { ...convo};
-      convoCopy.messages.reverse()
-      console.log(convoCopy)
-      return convoCopy;
-  })
+export const addReverseConvoToStore = (messages) => {
+  const newMessages = [...messages].reverse();
+  console.log(newMessages)
+  return newMessages
 }
  
 export const addMessageToStore = (state, payload) => {

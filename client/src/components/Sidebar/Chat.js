@@ -2,7 +2,7 @@ import { Component } from "react";
 import { Box } from "@material-ui/core";
 import { BadgeAvatar, ChatContent } from "../Sidebar";
 import { withStyles } from "@material-ui/core/styles";
-import { setActiveChat } from "../../store/activeConversation";
+import { setActiveChat, setReverseMessages } from "../../store/activeConversation";
 import { connect } from "react-redux";
 
 const styles = {
@@ -22,6 +22,8 @@ const styles = {
 class Chat extends Component {
   handleClick = async (conversation) => {
     await this.props.setActiveChat(conversation.otherUser.username);
+    // console.log(setReverseMessages(conversation.messages))
+    await this.props.setReverseMessages(conversation.messages);
   };
 
   render() {
@@ -49,6 +51,9 @@ const mapDispatchToProps = (dispatch) => {
     setActiveChat: (id) => {
       dispatch(setActiveChat(id));
     },
+    setReverseMessages: (messages) => {
+      dispatch(setReverseMessages(messages))
+    }
   };
 };
 
