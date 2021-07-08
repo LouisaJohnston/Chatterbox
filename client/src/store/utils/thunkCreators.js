@@ -109,13 +109,6 @@ export const postMessage = (body) => async (dispatch) => {
   }
 };
 
-export const markSeen = (body) => () => {
-  let options = {
-    messageID: body.message.id
-  }
-  socket.emit("markSeen", options)
-}
-
 export const searchUsers = (searchTerm) => async (dispatch) => {
   try {
     const { data } = await axios.get(`/api/users/${searchTerm}`);

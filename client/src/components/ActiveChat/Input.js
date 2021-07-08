@@ -3,6 +3,7 @@ import { FormControl, FilledInput } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import { connect } from "react-redux";
 import { postMessage } from "../../store/utils/thunkCreators";
+import { setTypingStatus } from "../../store/typingStatus";
 
 const styles = {
   root: {
@@ -30,6 +31,7 @@ class Input extends Component {
     this.setState({
       text: event.target.value,
     });
+    this.setTypingStatus(this.props.otherUser.id)
   };
 
   handleSubmit = async (event) => {
@@ -44,7 +46,10 @@ class Input extends Component {
     await this.props.postMessage(reqBody);
     this.setState({
       text: "",
+      isTyping: false,
     });
+    console.log(this.state.text)
+    console.log(this.state.isTyping)
   };
 
   render() {
@@ -78,6 +83,9 @@ const mapDispatchToProps = (dispatch) => {
     postMessage: (message) => {
       dispatch(postMessage(message));
     },
+    setTypingStatus: (id) => {
+      dispatch(setTypingStatus(id))
+    }
   };
 };
 

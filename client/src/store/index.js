@@ -5,6 +5,7 @@ import thunkMiddleware from "redux-thunk";
 import user from "./user";
 import conversations from "./conversations";
 import activeConversation from "./activeConversation";
+import typingStatus from "./typingStatus";
 
 const CLEAR_ON_LOGOUT = "CLEAR_ON_LOGOUT";
 
@@ -18,6 +19,7 @@ const appReducer = combineReducers({
   user,
   conversations,
   activeConversation,
+  typingStatus,
 });
 const rootReducer = (state, action) => {
   if (action.type === CLEAR_ON_LOGOUT) {

@@ -1,4 +1,3 @@
-import moment from "moment";
 import io from "socket.io-client";
 import store from "./store";
 import {
@@ -22,16 +21,7 @@ socket.on("connect", () => {
 
   socket.on("new-message", (data) => {
     store.dispatch(setNewMessage(data.message, data.sender));
-    let options = {
-      messageID: data.message.id,
-      timetoken: moment().valueOf()
-    }
-    socket.emit("received", options)
   });
-
-  socket.on("delivered", (data){
-    
-  })
 });
 
 export default socket;
