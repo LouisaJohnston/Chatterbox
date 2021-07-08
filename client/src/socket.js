@@ -23,11 +23,15 @@ socket.on("connect", () => {
   socket.on("new-message", (data) => {
     store.dispatch(setNewMessage(data.message, data.sender));
     let options = {
-      messageId: data.message.id,
+      messageID: data.message.id,
       timetoken: moment().valueOf()
     }
     socket.emit("received", options)
   });
+
+  socket.on("delivered", (data){
+    
+  })
 });
 
 export default socket;

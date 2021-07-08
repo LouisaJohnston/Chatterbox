@@ -8,7 +8,6 @@ import {
 } from "../conversations";
 import { gotUser, setFetchingStatus } from "../user";
 
-
 axios.interceptors.request.use(async function (config) {
   const token = await localStorage.getItem("messenger-token");
   config.headers["x-access-token"] = token;
@@ -110,10 +109,11 @@ export const postMessage = (body) => async (dispatch) => {
   }
 };
 
-export const markSeen = (body) => async () => {
+export const markSeen = (body) => () => {
   let options = {
-    
+    messageID: body.message.id
   }
+  socket.emit("markSeen", options)
 }
 
 export const searchUsers = (searchTerm) => async (dispatch) => {
