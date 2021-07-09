@@ -42,4 +42,17 @@ router.post("/", async (req, res, next) => {
   }
 });
 
+router.put("/messages/:id", async (req, res, next) => {
+  try {
+    let message = await Message.findMessage(req);
+    console.log(message)
+    let seenMessage = await message.update({
+      seen: true
+    });
+    return res.json({ seenMessage })
+  } catch (error) {
+    next(error)
+  }
+})
+
 module.exports = router;

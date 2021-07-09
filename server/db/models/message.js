@@ -17,4 +17,13 @@ const Message = db.define("message", {
   }
 });
 
+Message.findMessage = async function (id) {
+  const message = await Message.findOne({
+    where: {
+        messageId: id
+    }
+  });
+  return message;
+};
+
 module.exports = Message;
