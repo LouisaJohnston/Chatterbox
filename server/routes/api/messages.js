@@ -42,14 +42,15 @@ router.post("/", async (req, res, next) => {
   }
 });
 
-router.put("/messages/:id", async (req, res, next) => {
+router.put("/:id", async (req, res, next) => {
   try {
-    let message = await Message.findMessage(req);
+    const { id } = req.params
+    const message = await Message.update(
+      { seen: true },
+      {where: { id: id }}
+    )
     console.log(message)
-    let seenMessage = await message.update({
-      seen: true
-    });
-    return res.json({ seenMessage })
+    return res.json(message)
   } catch (error) {
     next(error)
   }
