@@ -22,10 +22,9 @@ const styles = {
 
 class Chat extends Component {
   messageFilter = (conversation) => {
-    let convoMessages = conversation.messages
-    console.log(convoMessages.length)
+    let convoMessages = conversation.messages;
     for (let i = 0; i < convoMessages.length; i++) {
-      if (convoMessages[i].senderId === conversation.otherUser.id) {
+      if (convoMessages[i].senderId === conversation.otherUser.id && convoMessages[i].seen === false) {
         setSeen(convoMessages[i].id)
       }; 
     };

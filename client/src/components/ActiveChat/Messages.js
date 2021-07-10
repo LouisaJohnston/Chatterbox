@@ -3,7 +3,7 @@ import { SenderBubble, OtherUserBubble } from "../ActiveChat";
 import moment from "moment";
 
 const Messages = (props) => {
-  const { messages, otherUser, userId } = props;
+  const { messages, otherUser, userId, latestMessageId } = props;
 
   return (
     <Box>
@@ -11,7 +11,7 @@ const Messages = (props) => {
         const time = moment(message.createdAt).format("h:mm");
 
         return message.senderId === userId ? (
-          <SenderBubble key={message.id} text={message.text} time={time} userId ={userId}/>
+          <SenderBubble key={message.id} messageId={message.id} text={message.text} time={time} userId ={userId} latestMessageId={latestMessageId} readStatus={message.seen}/>
         ) : (
           <OtherUserBubble key={message.id} text={message.text} time={time} otherUser={otherUser} />
         );

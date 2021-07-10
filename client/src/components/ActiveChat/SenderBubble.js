@@ -28,13 +28,16 @@ const useStyles = makeStyles(() => ({
 
 const SenderBubble = (props) => {
   const classes = useStyles();
-  const { time, text } = props;
+  const { time, text, messageId, latestMessageId, readStatus } = props;
   return (
     <Box className={classes.root}>
       <Typography className={classes.date}>{time}</Typography>
       <Box className={classes.bubble}>
         <Typography className={classes.text}>{text}</Typography>
       </Box>
+      { messageId === latestMessageId && readStatus === true ?
+        <div>Seen</div> : null
+      }
     </Box>
   );
 };

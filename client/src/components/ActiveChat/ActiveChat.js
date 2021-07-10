@@ -24,23 +24,6 @@ const ActiveChat = (props) => {
   const { user } = props;
   const conversation = props.conversation || {};
 
-  let returnedMessage = {}
-  const findUserMessages = (conversation) => {
-    let messagesReceived = []
-    let convoMessages = conversation.messages
-    if (conversation.length) {
-      for (let i = 0; i < convoMessages.length; i++) {
-        if (conversation.senderId === user.id){
-          messagesReceived.unshift(convoMessages[i])
-          returnedMessage = messagesReceived[0]
-        }
-      }
-      return returnedMessage
-    }
-  };
-  findUserMessages(conversation)
-  console.log(returnedMessage)
-
   return ( 
     <Box className={classes.root}>
       {conversation.otherUser && (
@@ -54,6 +37,7 @@ const ActiveChat = (props) => {
               messages={conversation.messages}
               otherUser={conversation.otherUser}
               userId={user.id}
+              latestMessageId={conversation.latestMessageId}
             />
             <Input
               otherUser={conversation.otherUser}
