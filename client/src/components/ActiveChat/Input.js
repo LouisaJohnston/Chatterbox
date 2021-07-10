@@ -31,7 +31,7 @@ class Input extends Component {
     this.setState({
       text: event.target.value,
     });
-    this.setTypingStatus(this.props.otherUser.id)
+    // this.setTypingStatus(this.props.otherUser.id)
   };
 
   handleSubmit = async (event) => {

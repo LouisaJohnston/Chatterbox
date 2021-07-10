@@ -111,7 +111,7 @@ export const postMessage = (body) => async (dispatch) => {
 
 export const setSeen = async (id) => {
   try {
-    const { data } = await axios.put(`/api/messages/${id}`, { seen: true })
+    const { data } = await axios.put(`/api/messages/${id}`)
     return data
   } catch (error) {
     console.error(error)
