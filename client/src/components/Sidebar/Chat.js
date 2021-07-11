@@ -30,10 +30,9 @@ class Chat extends Component {
     };
   };
 
-
   handleClick = async (conversation) => {
     await this.props.setActiveChat(conversation.otherUser.username);
-    await this.messageFilter(conversation)
+    await this.messageFilter(conversation);
   };
 
   render() {

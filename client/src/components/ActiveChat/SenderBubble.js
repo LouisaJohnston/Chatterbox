@@ -10,7 +10,6 @@ const useStyles = makeStyles(() => ({
   profilePic: {
     height: 20,
     width: 20,
-    // marginRight: 11,
     marginTop: 6
   },
   date: {
