@@ -44,10 +44,7 @@ class Input extends Component {
     await this.props.postMessage(reqBody);
     this.setState({
       text: "",
-      isTyping: false,
     });
-    console.log(this.state.text)
-    console.log(this.state.isTyping)
   };
 
   render() {

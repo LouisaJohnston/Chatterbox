@@ -42,14 +42,13 @@ router.post("/", async (req, res, next) => {
   }
 });
 
-router.put("/:id", async (req, res, next) => {
+router.put("/:markMessageAsSeen", async (req, res, next) => {
   try {
     const { id } = req.params
     const message = await Message.update(
       { seen: true },
-      {where: { id: id }}
+      { where: { id } }
     )
-    console.log(message)
     return res.json(message)
   } catch (error) {
     next(error)

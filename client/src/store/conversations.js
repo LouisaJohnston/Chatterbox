@@ -15,6 +15,7 @@ const REMOVE_OFFLINE_USER = "REMOVE_OFFLINE_USER";
 const SET_SEARCHED_USERS = "SET_SEARCHED_USERS";
 const CLEAR_SEARCHED_USERS = "CLEAR_SEARCHED_USERS";
 const ADD_CONVERSATION = "ADD_CONVERSATION";
+const SET_MARKED_MESSAGE = "SET_MARKED_MESSAGE"
 
 // ACTION CREATORS
 
@@ -31,6 +32,13 @@ export const setNewMessage = (message, sender) => {
     payload: { message, sender: sender || null },
   };
 };
+
+export const setMarkedMessage = (id) => {
+  return {
+    type: SET_MARKED_MESSAGE,
+    id,
+  }
+} 
 
 export const addOnlineUser = (id) => {
   return {
@@ -75,6 +83,8 @@ const reducer = (state = [], action) => {
       return action.conversations;
     case SET_MESSAGE:
       return addMessageToStore(state, action.payload);
+    case SET_MARKED_MESSAGE: 
+      return setMarkedMessage(action.id)
     case ADD_ONLINE_USER: {
       return addOnlineUserToStore(state, action.id);
     }

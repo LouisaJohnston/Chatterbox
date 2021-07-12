@@ -1,6 +1,5 @@
 import { Box, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { useState, useEffect } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,24 +35,22 @@ const useStyles = makeStyles((theme) => ({
 
 const ChatContent = (props) => {
   const classes = useStyles();
-  const [unreadMessageCount, setUnreadMessageCount] = useState(0)
   const { conversation } = props;
   const { latestMessageText, otherUser, messages } = conversation;
 
-  useEffect(() => {
-    const countMessages = (messages) => {
-      let newMessageCount = 0
-      for (let i = 0; i < messages.length; i++) {
-        if (messages[i].seen === false) {
-          newMessageCount = newMessageCount + 1
-        }
-        console.log(newMessageCount)
-        setUnreadMessageCount(newMessageCount) 
-      }
-    }
-    countMessages(messages)
-  }, [messages])
+  const countUnSeenMessages = (messages) => {
+    let unSeenCount = 0
+    
+    messages.forEach(message => {
+       if (!message.seen) {
+          unSeenCount += 1
+       }
+    });
+    
+    return unSeenCount; 
+  };
 
+  const unSeenCount = countUnSeenMessages(messages)
 
   return (
     <Box className={classes.root}>
@@ -64,9 +61,9 @@ const ChatContent = (props) => {
         <Typography className={classes.previewText}>
           {latestMessageText}
         </Typography>
-        { unreadMessageCount !== 0 ?
+        { unSeenCount !== 0 ?
           <Typography className={classes.notification}>
-            {unreadMessageCount}
+            { unSeenCount }
           </Typography> : null
         }
       </Box>

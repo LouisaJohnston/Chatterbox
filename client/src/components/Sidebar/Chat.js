@@ -3,7 +3,7 @@ import { Box } from "@material-ui/core";
 import { BadgeAvatar, ChatContent } from "../Sidebar";
 import { withStyles } from "@material-ui/core/styles";
 import { setActiveChat } from "../../store/activeConversation";
-import { setSeen } from "../../store/utils/thunkCreators"
+import { markMessage } from "../../store/utils/thunkCreators";
 import { connect } from "react-redux";
 
 const styles = {
@@ -23,13 +23,13 @@ const styles = {
 class Chat extends Component {
   messageFilter = (conversation) => {
     let convoMessages = conversation.messages;
-    for (let i = 0; i < convoMessages.length; i++) {
-      if (convoMessages[i].senderId === conversation.otherUser.id && convoMessages[i].seen === false) {
-        setSeen(convoMessages[i].id)
-      }; 
-    };
+    convoMessages.forEach(message => {
+      if (message.senderId === conversation.otherUser.id && message.seen === false) {
+        markMessage(message.id)
+      }
+    });
   };
-
+  
   handleClick = async (conversation) => {
     await this.props.setActiveChat(conversation.otherUser.username);
     await this.messageFilter(conversation);
@@ -60,6 +60,9 @@ const mapDispatchToProps = (dispatch) => {
     setActiveChat: (id) => {
       dispatch(setActiveChat(id));
     },
+    markMessage: (id) => {
+      dispatch(markMessage(id));
+    }
   };
 };
 

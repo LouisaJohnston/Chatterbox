@@ -102,16 +102,16 @@ export const postMessage = (body) => async (dispatch) => {
     } else {
       dispatch(setNewMessage(data.message, data.sender));
     }
-
     sendMessage(data, body);
   } catch (error) {
     console.error(error);
   }
 };
 
-export const setSeen = async (id) => {
+export const markMessage = (markMessageAsSeen) => async (dispatch) => {
   try {
-    const { data } = await axios.put(`/api/messages/${id}`)
+    const { data } = await axios.put(`/api/messages/${markMessageAsSeen}`)
+    // dispatch(setMarkedMessage(data))
     return data
   } catch (error) {
     console.error(error)
