@@ -24,6 +24,12 @@ export const addMessageToStore = (state, payload) => {
   });
 };
 
+export const addMarkedToStore =(state, id) => {
+  return state.map((convo) => {
+    
+  })
+}
+
 export const addOnlineUserToStore = (state, id) => {
   return state.map((convo) => {
     if (convo.otherUser.id === id) {

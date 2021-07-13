@@ -4,6 +4,7 @@ import {
   addSearchedUsersToStore,
   removeOfflineUserFromStore,
   addMessageToStore,
+  addMarkedToStore,
 } from "./utils/reducerFunctions";
 
 // ACTIONS
@@ -83,8 +84,8 @@ const reducer = (state = [], action) => {
       return action.conversations;
     case SET_MESSAGE:
       return addMessageToStore(state, action.payload);
-    case SET_MARKED_MESSAGE: 
-      return setMarkedMessage(action.id)
+    case SET_MARKED_MESSAGE:
+      return addMarkedToStore(state, action.id);
     case ADD_ONLINE_USER: {
       return addOnlineUserToStore(state, action.id);
     }
