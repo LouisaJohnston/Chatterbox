@@ -121,7 +121,7 @@ export const markMessage = async (markMessageAsSeen) => {
 export const putMarked = (markMessageAsSeen) => async (dispatch) => {
   try {
     const data = await markMessage(markMessageAsSeen);
-    dispatch(setMarkedMessage(data)) ;
+    dispatch(setMarkedMessage(data.message, data.message.id)) ;
   } catch (error) {
     console.log(error)
   };

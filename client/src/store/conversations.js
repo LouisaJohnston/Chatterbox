@@ -34,10 +34,10 @@ export const setNewMessage = (message, sender) => {
   };
 };
 
-export const setMarkedMessage = (id) => {
+export const setMarkedMessage = (message, id) => {
   return {
     type: SET_MARKED_MESSAGE,
-    id,
+    payload: { message, id }
   }
 } 
 
@@ -85,7 +85,7 @@ const reducer = (state = [], action) => {
     case SET_MESSAGE:
       return addMessageToStore(state, action.payload);
     case SET_MARKED_MESSAGE:
-      return addMarkedToStore(state, action.id);
+      return addMarkedToStore(state, action.payload);
     case ADD_ONLINE_USER: {
       return addOnlineUserToStore(state, action.id);
     }

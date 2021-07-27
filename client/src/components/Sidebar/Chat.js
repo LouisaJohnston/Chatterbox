@@ -26,7 +26,7 @@ class Chat extends Component {
     convoMessages.forEach(message => {
       if (message.senderId === conversation.otherUser.id && message.seen === false) {
         putMarked(message.id)
-        console.log(putMarked(message.id))
+        console.log(putMarked(message))
       }
     });
   };
@@ -61,8 +61,8 @@ const mapDispatchToProps = (dispatch) => {
     setActiveChat: (id) => {
       dispatch(setActiveChat(id));
     },
-    putMarked: (id) => {
-      dispatch(putMarked(id))
+    putMarked: (message) => {
+      dispatch(putMarked(message))
     },
   };
 };

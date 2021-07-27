@@ -44,7 +44,7 @@ router.post("/", async (req, res, next) => {
 
 router.put("/:markMessageAsSeen", async (req, res, next) => {
   try {
-    const { id } = req.params
+    const { id } = req.params.id
     const message = await Message.update(
       { seen: true },
       { where: { id } }
