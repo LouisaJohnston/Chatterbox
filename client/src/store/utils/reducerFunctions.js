@@ -17,7 +17,6 @@ export const addMessageToStore = (state, payload) => {
       convoCopy.messages.push(message);
       convoCopy.latestMessageText = message.text;
       convoCopy.latestMessageId = message.id;
-      console.log(convoCopy)
       return convoCopy;
     } else {
       return convo;
@@ -26,16 +25,17 @@ export const addMessageToStore = (state, payload) => {
 };
 
 export const addMarkedToStore = (state, payload) => {
-  const { message, id } = payload;
+  const { message } = payload;
+  console.log(payload)
   return state.map((convo) => {
+    const convoCopy = { ...convo };
     if (convo.id === message.conversationId) {
-      const convoCopy = { ...convo };
       for (let i = 0; i < convoCopy.messages.length; i++) {
-        console.log(convoCopy)
+        if (convoCopy.messages[i].id === message.id)
         convoCopy.messages[i].seen = true;
       }
-      return convoCopy;
     }
+    return convoCopy;
   });
 };
 

@@ -34,10 +34,10 @@ export const setNewMessage = (message, sender) => {
   };
 };
 
-export const setMarkedMessage = (message, id) => {
+export const setMarkedMessage = (message) => {
   return {
     type: SET_MARKED_MESSAGE,
-    payload: { message, id }
+    payload: { message }
   }
 } 
 
