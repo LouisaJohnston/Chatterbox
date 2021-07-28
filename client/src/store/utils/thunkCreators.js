@@ -81,7 +81,6 @@ export const fetchConversations = () => async (dispatch) => {
 
 const saveMessage = async (body) => {
   const { data } = await axios.post("/api/messages", body);
-  console.log(data)
   return data;
 };
   
@@ -103,6 +102,7 @@ export const postMessage = (body) => async (dispatch) => {
       dispatch(addConversation(body.recipientId, data.message));
     } else {
       dispatch(setNewMessage(data.message, data.sender));
+      console.log("Post message", data)
     }
     sendMessage(data, body);
   } catch (error) {
@@ -112,8 +112,8 @@ export const postMessage = (body) => async (dispatch) => {
 
 export const markMessage = async (markMessageAsSeen) => {
   try {
-    const { data } = await axios.put(`/api/messages/${markMessageAsSeen.id}`)
-    console.log(data)
+    const { data } = await axios.put(`/api/messages/${markMessageAsSeen.id}`);
+    console.log("Marked data", data)
     return data;
   } catch (error) {
     console.error(error)
@@ -121,6 +121,7 @@ export const markMessage = async (markMessageAsSeen) => {
 };
 
 const openMessage = (data) => {
+  console.log("Socket", data)
   socket.emit("message-marked", {
     message: data.message,
   });
@@ -128,8 +129,9 @@ const openMessage = (data) => {
 
 export const putMarked = (markMessageAsSeen) => async (dispatch) => {
   try {
-    const data = await markMessage(markMessageAsSeen);
-    dispatch(setMarkedMessage(data.message));
+    const { data } = await markMessage(markMessageAsSeen);
+    console.log("YEESH", markMessageAsSeen)
+    dispatch(setMarkedMessage(data));
     openMessage(data);
   } catch (error) {
     console.log(error)

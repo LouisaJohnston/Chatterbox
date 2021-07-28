@@ -26,7 +26,7 @@ export const addMessageToStore = (state, payload) => {
 
 export const addMarkedToStore = (state, payload) => {
   const { message } = payload;
-  console.log(payload)
+  console.log("nugget", payload)
   return state.map((convo) => {
     const convoCopy = { ...convo };
     if (convo.id === message.conversationId) {

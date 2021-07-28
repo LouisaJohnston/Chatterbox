@@ -19,6 +19,7 @@ router.post("/", async (req, res, next) => {
 
     if (conversation && conversationId) {
       const message = await Message.create({ senderId, text, conversationId });
+      console.log(message)
       return res.json({ message, sender });
     } else {
       // create conversation
@@ -44,14 +45,18 @@ router.post("/", async (req, res, next) => {
 
 router.put("/:markMessageAsSeen", async (req, res, next) => {
   try {
-    // const { id } = req.params
-    const id  = parseInt(Object.values(req.params))
-    console.log("HAI", id)
-    const message = await Message.update(
+    const id  = parseInt(Object.values(req.params));
+    const messages = await Message.update(
       { seen: true },
-      { where: { id } }
-    )
-    return res.json(message)
+      { where: { id },
+      returning: true,
+      plain: true,
+    },
+    );
+    for (let i = 0; i < messages.length; i++) {
+      console.log("PAI", messages[i])
+    }
+    res.json(messages)
   } catch (error) {
     next(error)
   }

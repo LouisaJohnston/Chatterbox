@@ -26,7 +26,6 @@ class Chat extends Component {
     convoMessages.forEach(message => {
       if (message.senderId === conversation.otherUser.id) {
         this.props.putMarked(message)
-        console.log(message)
       }
     });
   };
