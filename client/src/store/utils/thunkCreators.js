@@ -113,8 +113,7 @@ export const postMessage = (body) => async (dispatch) => {
 export const markMessage = async (markMessageAsSeen) => {
   try {
     const { data } = await axios.put(`/api/messages/${markMessageAsSeen.id}`);
-    console.log("Marked data", data)
-    return data;
+    return data[1];
   } catch (error) {
     console.error(error)
   }

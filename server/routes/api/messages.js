@@ -50,16 +50,12 @@ router.put("/:markMessageAsSeen", async (req, res, next) => {
       { seen: true },
       { where: { id },
       returning: true,
-      plain: true,
-    },
+      plain: true,},
     );
-    for (let i = 0; i < messages.length; i++) {
-      console.log("PAI", messages[i])
-    }
     res.json(messages)
   } catch (error) {
     next(error)
-  }
-})
+  };
+});
 
 module.exports = router;

@@ -24,7 +24,7 @@ class Chat extends Component {
   messageFilter = (conversation) => {
     let convoMessages = conversation.messages;
     convoMessages.forEach(message => {
-      if (message.senderId === conversation.otherUser.id) {
+      if (message.senderId === conversation.otherUser.id && !message.seen) {
         this.props.putMarked(message)
       }
     });

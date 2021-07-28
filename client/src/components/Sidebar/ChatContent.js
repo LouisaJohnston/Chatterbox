@@ -40,13 +40,11 @@ const ChatContent = (props) => {
 
   const countUnSeenMessages = (messages) => {
     let unSeenCount = 0
-    
     messages.forEach(message => {
-       if (!message.seen) {
+       if (message.senderId === conversation.otherUser.id && !message.seen) {
           unSeenCount += 1
        }
     });
-    
     return unSeenCount; 
   };
 
