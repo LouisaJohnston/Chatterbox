@@ -6,7 +6,6 @@ import { clearSearchedUsers } from "../../store/conversations";
 
 const SidebarContainer = (props) => {
   const { searchUsers, clearSearchedUsers } = props;
-
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleChange = async (event) => {
@@ -35,7 +34,7 @@ const mapDispatchToProps = (dispatch) => {
     },
     clearSearchedUsers: () => {
       dispatch(clearSearchedUsers());
-    }
+    },
   };
 };
 
