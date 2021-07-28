@@ -23,13 +23,13 @@ const styles = {
 class Chat extends Component {
   messageFilter = (conversation) => {
     let convoMessages = conversation.messages;
-    convoMessages.forEach(message => {
+    convoMessages.forEach((message) => {
       if (message.senderId === conversation.otherUser.id && !message.seen) {
-        this.props.putMarked(message)
+        this.props.putMarked(message);
       }
     });
   };
-  
+
   handleClick = async (conversation) => {
     await this.props.setActiveChat(conversation.otherUser.username);
     await this.messageFilter(conversation);
@@ -61,7 +61,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(setActiveChat(id));
     },
     putMarked: (message) => {
-      dispatch(putMarked(message))
+      dispatch(putMarked(message));
     },
   };
 };

@@ -25,13 +25,12 @@ export const addMessageToStore = (state, payload) => {
 };
 
 export const addMarkedToStore = (state, message) => {
-  console.log("nugget", message)
   return state.map((convo) => {
     const convoCopy = { ...convo };
     if (convo.id === message.conversationId) {
       for (let i = 0; i < convoCopy.messages.length; i++) {
         if (convoCopy.messages[i].id === message.id)
-        convoCopy.messages[i].seen = true;
+          convoCopy.messages[i].seen = true;
       }
     }
     return convoCopy;

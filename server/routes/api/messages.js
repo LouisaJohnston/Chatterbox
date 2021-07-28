@@ -11,7 +11,7 @@ router.post("/", async (req, res, next) => {
     const senderId = req.user.id;
     const { recipientId, text, conversationId, sender } = req.body;
 
-    // find a conversation 
+    // find a conversation
     let conversation = await Conversation.findConversation(
       senderId,
       recipientId
@@ -19,7 +19,6 @@ router.post("/", async (req, res, next) => {
 
     if (conversation && conversationId) {
       const message = await Message.create({ senderId, text, conversationId });
-      console.log(message)
       return res.json({ message, sender });
     } else {
       // create conversation
@@ -31,7 +30,7 @@ router.post("/", async (req, res, next) => {
         sender.online = true;
       }
     }
-    
+
     const message = await Message.create({
       senderId,
       text,
@@ -45,17 +44,15 @@ router.post("/", async (req, res, next) => {
 
 router.put("/:markMessageAsSeen", async (req, res, next) => {
   try {
-    const id  = parseInt(Object.values(req.params));
+    const id = parseInt(Object.values(req.params));
     const messages = await Message.update(
       { seen: true },
-      { where: { id },
-      returning: true,
-      plain: true,},
+      { where: { id }, returning: true, plain: true }
     );
-    res.json(messages)
+    res.json(messages);
   } catch (error) {
-    next(error)
-  };
+    next(error);
+  }
 });
 
 module.exports = router;

@@ -16,7 +16,7 @@ const REMOVE_OFFLINE_USER = "REMOVE_OFFLINE_USER";
 const SET_SEARCHED_USERS = "SET_SEARCHED_USERS";
 const CLEAR_SEARCHED_USERS = "CLEAR_SEARCHED_USERS";
 const ADD_CONVERSATION = "ADD_CONVERSATION";
-const SET_MARKED_MESSAGE = "SET_MARKED_MESSAGE"
+const SET_MARKED_MESSAGE = "SET_MARKED_MESSAGE";
 
 // ACTION CREATORS
 
@@ -38,8 +38,8 @@ export const setMarkedMessage = (message) => {
   return {
     type: SET_MARKED_MESSAGE,
     message,
-  }
-} 
+  };
+};
 
 export const addOnlineUser = (id) => {
   return {
