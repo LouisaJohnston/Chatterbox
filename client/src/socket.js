@@ -24,8 +24,8 @@ socket.on("connect", () => {
     store.dispatch(setNewMessage(data.message, data.sender));
   });
 
-  socket.on("message-marked", (data) => {
-    store.dispatch(setMarkedMessage(data.message));
+  socket.on("message-marked", (message) => {
+    store.dispatch(setMarkedMessage(message));
   });
 });
 

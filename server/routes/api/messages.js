@@ -42,7 +42,7 @@ router.post("/", async (req, res, next) => {
   }
 });
 
-router.put("/:markMessageAsSeen", async (req, res, next) => {
+router.put("/read/:message", async (req, res, next) => {
   try {
     const id = parseInt(Object.values(req.params));
     const messages = await Message.update(

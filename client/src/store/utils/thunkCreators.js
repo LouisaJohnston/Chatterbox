@@ -108,9 +108,9 @@ export const postMessage = (body) => async (dispatch) => {
   }
 };
 
-export const markMessage = async (markMessageAsSeen) => {
+export const markMessage = async (message) => {
   try {
-    const { data } = await axios.put(`/api/messages/${markMessageAsSeen.id}`);
+    const { data } = await axios.put(`/api/messages/read/${message.id}`);
     return data[1];
   } catch (error) {
     console.error(error);
@@ -119,15 +119,20 @@ export const markMessage = async (markMessageAsSeen) => {
 
 const openMessage = (data) => {
   socket.emit("message-marked", {
-    message: data.message,
+    message: data,
   });
 };
 
-export const putMarked = (markMessageAsSeen) => async (dispatch) => {
+export const putMarked = (conversation) => async (dispatch) => {
   try {
-    const data = await markMessage(markMessageAsSeen);
-    dispatch(setMarkedMessage(data));
-    openMessage(data);
+    let convoMessages = conversation.messages;
+    convoMessages.forEach(async (message) => {
+      const data = await markMessage(message);
+      if (message.senderId === conversation.otherUser.id && !message.seen) {
+        dispatch(setMarkedMessage(data));
+      }
+      openMessage(data);
+    });
   } catch (error) {
     console.error(error);
   }

@@ -18,7 +18,7 @@ const Messages = (props) => {
             time={time}
             userId={userId}
             latestMessageId={latestMessageId}
-            isRead={message.seen}
+            isSeen={message.seen}
             otherUser={otherUser}
           />
         ) : (

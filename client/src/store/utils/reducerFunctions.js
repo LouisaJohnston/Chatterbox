@@ -28,10 +28,11 @@ export const addMarkedToStore = (state, message) => {
   return state.map((convo) => {
     const convoCopy = { ...convo };
     if (convo.id === message.conversationId) {
-      for (let i = 0; i < convoCopy.messages.length; i++) {
-        if (convoCopy.messages[i].id === message.id)
-          convoCopy.messages[i].seen = true;
-      }
+      convoCopy.messages.forEach((convoMessage) => {
+        if (message.id === convoMessage.id) {
+          convoMessage.seen = true;
+        }
+      });
     }
     return convoCopy;
   });
