@@ -42,17 +42,17 @@ router.post("/", async (req, res, next) => {
   }
 });
 
-router.put("/read/:message", async (req, res, next) => {
-  try {
-    const id = parseInt(Object.values(req.params));
-    const messages = await Message.update(
-      { seen: true },
-      { where: { id }, returning: true, plain: true }
-    );
-    res.json(messages);
-  } catch (error) {
-    next(error);
-  }
-});
+// router.put("/read/:message", async (req, res, next) => {
+//   try {
+//     const id = parseInt(Object.values(req.params));
+//     const messages = await Message.update(
+//       { seen: true },
+//       { where: { id }, returning: true, plain: true }
+//     );
+//     res.json(messages);
+//   } catch (error) {
+//     next(error);
+//   }
+// });
 
 module.exports = router;

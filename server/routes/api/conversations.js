@@ -82,4 +82,18 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+router.put("/:id", async (req, res, next) => {
+  try {
+    console.log(req)
+    const id = parseInt(Object.values(req.params));
+    const messages = await Message.update(
+      { seen: true },
+      { where: { id }, returning: true, plain: true }
+    );
+    res.json(messages);
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router;
