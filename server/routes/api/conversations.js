@@ -84,11 +84,21 @@ router.get("/", async (req, res, next) => {
 
 router.put("/:id", async (req, res, next) => {
   try {
-    console.log(req)
-    const id = parseInt(Object.values(req.params));
+    const id = parseInt(req.params.id);
+    const userId = req.user.id;
     const messages = await Message.update(
       { seen: true },
-      { where: { id }, returning: true, plain: true }
+      {
+        where: {
+          conversationId: id,
+          senderId: {
+            [Op.not]: userId,
+          },
+          seen: false,
+        },
+        returning: true,
+        plain: true,
+      }
     );
     res.json(messages);
   } catch (error) {
