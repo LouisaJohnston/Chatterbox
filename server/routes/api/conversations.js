@@ -82,8 +82,7 @@ router.get("/", async (req, res, next) => {
       });
 
       const latestMessage = convoMessages[convoMessages.length - 1];
-
-      // convoJSON.unSeenMessageCount = countUnSeen(convoMessages)
+      
       convoJSON.unSeenMessageCount = getCount;
       convoJSON.latestMessageText = latestMessage.text;
       convoJSON.latestMessageId = latestMessage.id;
