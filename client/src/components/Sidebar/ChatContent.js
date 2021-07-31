@@ -36,20 +36,9 @@ const useStyles = makeStyles((theme) => ({
 const ChatContent = (props) => {
   const classes = useStyles();
   const { conversation } = props;
-  const { latestMessageText, otherUser, messages } = conversation;
+  const { unSeenMessageCount, latestMessageText, otherUser } = conversation;
 
-  const countUnSeenMessages = (messages) => {
-    let unSeenCount = 0
-    messages.forEach(message => {
-       if (message.senderId === conversation.otherUser.id && !message.seen) {
-          unSeenCount += 1
-       }
-    });
-    return unSeenCount; 
-  };
-
-  const unSeenCount = countUnSeenMessages(messages)
-
+  console.log(unSeenMessageCount)
   return (
     <Box className={classes.root}>
       <Box>
@@ -59,9 +48,9 @@ const ChatContent = (props) => {
         <Typography className={classes.previewText}>
           {latestMessageText}
         </Typography>
-        { unSeenCount !== 0 &&
+        { unSeenMessageCount !== 0 &&
           <Typography className={classes.notification}>
-            { unSeenCount }
+            {unSeenMessageCount}
           </Typography>
         }
       </Box>

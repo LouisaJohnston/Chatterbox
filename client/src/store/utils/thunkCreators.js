@@ -108,7 +108,7 @@ export const postMessage = (body) => async (dispatch) => {
   }
 };
 
-export const markMessage = async (conversationId) => {
+export const markMessages = async (conversationId) => {
   try {
     const { data } = await axios.put(`/api/conversations/${conversationId}`);
     return data[1];
@@ -125,7 +125,7 @@ const openMessage = (data) => {
 
 export const putMarked = (conversation) => async (dispatch) => {
   try {
-    const data = await markMessage(conversation.id);
+    const data = await markMessages(conversation.id);
     let convoMessages = conversation.messages;
     convoMessages.forEach(async (message) => {
       if (message.senderId === conversation.otherUser.id && !message.seen) {
