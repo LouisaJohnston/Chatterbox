@@ -82,7 +82,7 @@ router.get("/", async (req, res, next) => {
       });
 
       const latestMessage = convoMessages[convoMessages.length - 1];
-      
+
       convoJSON.unSeenMessageCount = getCount;
       convoJSON.latestMessageText = latestMessage.text;
       convoJSON.latestMessageId = latestMessage.id;
@@ -99,22 +99,25 @@ router.put("/:id", async (req, res, next) => {
   try {
     const id = parseInt(req.params.id);
     const userId = req.user.id;
-
-    const messages = await Message.update(
-      { seen: true },
-      {
-        where: {
-          seen: false,
-          conversationId: id,
-          senderId: {
-            [Op.not]: userId,
+    if (!req.user) {
+      return res.sendStatus(401);
+    } else {
+      const messages = await Message.update(
+        { seen: true },
+        {
+          where: {
+            seen: false,
+            conversationId: id,
+            senderId: {
+              [Op.not]: userId,
+            },
           },
-        },
-        returning: true,
-        plain: true,
-      }
-    );
-    res.json(messages);
+          returning: true,
+          plain: true,
+        }
+      );
+      res.json(messages);
+    }
   } catch (error) {
     next(error);
   }
