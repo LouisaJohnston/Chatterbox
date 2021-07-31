@@ -38,7 +38,6 @@ const ChatContent = (props) => {
   const { conversation } = props;
   const { unSeenMessageCount, latestMessageText, otherUser } = conversation;
 
-  console.log(unSeenMessageCount)
   return (
     <Box className={classes.root}>
       <Box>

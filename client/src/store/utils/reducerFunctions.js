@@ -34,7 +34,6 @@ export const addMarkedToStore = (state, message) => {
         }
       });
     }
-    
     return convoCopy;
   });
 };
