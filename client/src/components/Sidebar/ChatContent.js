@@ -31,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     borderRadius: 10,
   },
+  unSeenPreview: {
+    fontWeight: "bold",
+    color: "black",
+  },
 }));
 
 const ChatContent = (props) => {
@@ -44,14 +48,16 @@ const ChatContent = (props) => {
         <Typography className={classes.username}>
           {otherUser.username}
         </Typography>
-        <Typography className={classes.previewText}>
+        <Typography
+          className={`${classes.previewText} ${unSeenMessageCount !== 0 && classes.unSeenPreview}`}
+        >
           {latestMessageText}
         </Typography>
-        { unSeenMessageCount !== 0 &&
+        {unSeenMessageCount !== 0 && (
           <Typography className={classes.notification}>
             {unSeenMessageCount}
           </Typography>
-        }
+        )}
       </Box>
     </Box>
   );
