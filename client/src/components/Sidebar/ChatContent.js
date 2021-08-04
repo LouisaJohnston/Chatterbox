@@ -49,16 +49,18 @@ const ChatContent = (props) => {
           {otherUser.username}
         </Typography>
         <Typography
-          className={`${classes.previewText} ${unSeenMessageCount !== 0 && classes.unSeenPreview}`}
+          className={`${classes.previewText} ${
+            unSeenMessageCount !== 0 && classes.unSeenPreview
+          }`}
         >
           {latestMessageText}
         </Typography>
+      </Box>
         {unSeenMessageCount !== 0 && (
           <Typography className={classes.notification}>
             {unSeenMessageCount}
           </Typography>
         )}
-      </Box>
     </Box>
   );
 };
