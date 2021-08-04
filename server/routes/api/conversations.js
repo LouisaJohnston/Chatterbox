@@ -111,6 +111,7 @@ router.put("/seen/:conversationId", async (req, res, next) => {
     if (!req.user || !foundConvo) {
       return res.sendStatus(401);
     } else {
+      res.statusCode = 200;
       const messages = await Message.update(
         { seen: true },
         {
