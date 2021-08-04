@@ -110,7 +110,7 @@ export const postMessage = (body) => async (dispatch) => {
 
 export const markMessages = async (conversationId) => {
   try {
-    const { data } = await axios.put(`/api/conversations/${conversationId}`);
+    const { data } = await axios.put(`/api/conversations/seen/${conversationId}`);
     return data[1];
   } catch (error) {
     console.error(error);

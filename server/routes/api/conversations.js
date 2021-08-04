@@ -95,11 +95,20 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.put("/:id", async (req, res, next) => {
+router.put("/seen/:conversationId", async (req, res, next) => {
   try {
-    const id = parseInt(req.params.id);
+    const id = parseInt(Object.values(req.params));
     const userId = req.user.id;
-    if (!req.user) {
+    const foundConvo = await Conversation.findOne({
+      where: {
+        [Op.or]: {
+          user1Id: userId,
+          user2Id: userId,
+        },
+        id: id,
+      },
+    });
+    if (!req.user || !foundConvo) {
       return res.sendStatus(401);
     } else {
       const messages = await Message.update(
