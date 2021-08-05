@@ -11,7 +11,7 @@ router.post("/", async (req, res, next) => {
     const senderId = req.user.id;
     const { recipientId, text, conversationId, sender } = req.body;
 
-    // find a conversation 
+    // find a conversation
     let conversation = await Conversation.findConversation(
       senderId,
       recipientId
@@ -30,7 +30,7 @@ router.post("/", async (req, res, next) => {
         sender.online = true;
       }
     }
-    
+
     const message = await Message.create({
       senderId,
       text,

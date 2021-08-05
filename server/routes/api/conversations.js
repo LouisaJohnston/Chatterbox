@@ -69,11 +69,65 @@ router.get("/", async (req, res, next) => {
       }
 
       // set properties for notification count and latest message preview
-      convoJSON.latestMessageText = convoJSON.messages[convoJSON.messages.length - 1].text;
+      const convoMessages = convoJSON.messages;
+
+      const getCount = await Message.count({
+        where: {
+          seen: false,
+          conversationId: convoJSON.id,
+          senderId: {
+            [Op.not]: userId,
+          },
+        },
+      });
+
+      const latestMessage = convoMessages[convoMessages.length - 1];
+
+      convoJSON.unSeenMessageCount = getCount;
+      convoJSON.latestMessageText = latestMessage.text;
+      convoJSON.latestMessageId = latestMessage.id;
       conversations[i] = convoJSON;
     }
 
     res.json(conversations);
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.put("/seen/:conversationId", async (req, res, next) => {
+  try {
+    const id = parseInt(Object.values(req.params));
+    const userId = req.user.id;
+    const foundConvo = await Conversation.findOne({
+      where: {
+        [Op.or]: {
+          user1Id: userId,
+          user2Id: userId,
+        },
+        id: id,
+      },
+    });
+    if (!req.user || !foundConvo) {
+      return res.sendStatus(401);
+    } else {
+      const messages = await Message.update(
+        { seen: true },
+        {
+          where: {
+            seen: false,
+            conversationId: id,
+            senderId: {
+              [Op.not]: userId,
+            },
+          },
+          returning: true,
+          plain: true,
+        }
+      );
+      res.statusCode = 200;
+      res.json(messages);
+    }
   } catch (error) {
     next(error);
   }

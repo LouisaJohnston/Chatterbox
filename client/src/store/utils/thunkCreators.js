@@ -5,6 +5,7 @@ import {
   addConversation,
   setNewMessage,
   setSearchedUsers,
+  setMarkedMessage,
 } from "../conversations";
 import { gotUser, setFetchingStatus } from "../user";
 
@@ -82,7 +83,6 @@ const saveMessage = async (body) => {
   const { data } = await axios.post("/api/messages", body);
   return data;
 };
-  
 
 const sendMessage = (data, body) => {
   socket.emit("new-message", {
@@ -102,8 +102,37 @@ export const postMessage = (body) => async (dispatch) => {
     } else {
       dispatch(setNewMessage(data.message, data.sender));
     }
-
     sendMessage(data, body);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const markMessages = async (conversationId) => {
+  try {
+    const { data } = await axios.put(`/api/conversations/seen/${conversationId}`);
+    return data[1];
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const openMessage = (data) => {
+  socket.emit("message-marked", {
+    message: data,
+  });
+};
+
+export const putMarked = (conversation) => async (dispatch) => {
+  try {
+    const data = await markMessages(conversation.id);
+    let convoMessages = conversation.messages;
+    convoMessages.forEach(async (message) => {
+      if (message.senderId === conversation.otherUser.id && !message.seen) {
+        openMessage(data);
+        dispatch(setMarkedMessage(data));
+      }
+    });
   } catch (error) {
     console.error(error);
   }
