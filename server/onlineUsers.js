@@ -1,2 +1,2 @@
-const onlineUsers = {};
-module.exports = onlineUsers;
+const userSocketIdMap = new Map();
+module.exports = userSocketIdMap;
