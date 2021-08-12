@@ -56,7 +56,10 @@ io.on("connection", (socket) => {
   });
 
   socket.on("logout", (id) => {
-    delete onlineUsers[id]
+    if (onlineUsers[id]) {
+      delete onlineUsers[id];
+      socket.broadcast.emit("remove-offline-user", id);
+    }
   });
 });
 
