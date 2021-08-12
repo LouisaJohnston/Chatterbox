@@ -11,6 +11,7 @@ const { app, sessionStore } = require("../app");
 const http = require("http");
 const db = require("../db");
 const onlineUsers = require("../onlineUsers");
+const { parse } = require("dotenv");
 
 /**
  * Get port from environment and store in Express.
@@ -37,7 +38,6 @@ io.on("connection", (socket) => {
       onlineUsers[id] = [];
     }
     onlineUsers[id].push(socket.id);
-    onlineUsers[socket.id] = id;
     // send the user who just went online to everyone else who is already online
     socket.broadcast.emit("add-online-user", id);
   });
@@ -55,8 +55,8 @@ io.on("connection", (socket) => {
     });
   });
 
-  socket.on("logout", () => {
-    delete onlineUsers[socket.id];
+  socket.on("logout", (id) => {
+    delete onlineUsers[id]
   });
 });
 
