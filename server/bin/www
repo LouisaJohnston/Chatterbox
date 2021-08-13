@@ -11,7 +11,7 @@ const { app, sessionStore } = require("../app");
 const http = require("http");
 const db = require("../db");
 const userSocketIdMap = require("../onlineUsers");
-const { parse } = require("dotenv");
+const jwt = require("jsonwebtoken");
 
 /**
  * Get port from environment and store in Express.
@@ -32,6 +32,21 @@ const server = http.createServer(app);
 
 const io = require("socket.io")(server);
 
+io.use((socket, next) => {
+  if (socket.query && socket.query.token) {
+    jwt.verify(
+      socket.query.token,
+      process.env.SESSION_SECRET,
+      (err, decoded) => {
+        if (err) return next(new Error("Authentication error"));
+        socket.decoded = decoded;
+        next();
+      }
+    );
+  } else {
+    next(new Error("Authentication error"));
+  }
+});
 io.on("connection", (socket) => {
   socket.on("go-online", (id) => {
     const addClientToMap = (id, socketId) => {
