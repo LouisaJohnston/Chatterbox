@@ -58,18 +58,18 @@ io.on("connection", (socket) => {
     };
     addClientToMap(id, socket.id);
     // send the user who just went online to everyone else who is already online
-    socket.to(socket.id).emit("add-online-user", id);
+    socket.broadcast.emit("add-online-user", id);
   });
   
   socket.on("new-message", (data) => {
-    socket.to(data.sender).emit("new-message", {
+    socket.to(socket.id).emit("new-message", {
       message: data.message,
       sender: data.sender,
     });
   });
 
   socket.on("message-marked", (data) => {
-    socket.to(socket.id).emit("message-marked", {
+    socket.broadcast.emit("message-marked", {
       message: data,
     });
   });
@@ -81,7 +81,7 @@ io.on("connection", (socket) => {
         userSocketIdSet.delete(socketId);
         if (userSocketIdSet.size === 0) {
           userSocketIdMap.delete(id);
-          socket.to(socket.id).emit("remove-offline-user", id);
+          socket.broadcast.emit("remove-offline-user", id);
         }
       }
     };
