@@ -2,6 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Box } from "@material-ui/core";
 import { Input, Header, Messages } from "./index";
 import { connect } from "react-redux";
+import { useState, useEffect } from "react";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -23,6 +24,17 @@ const ActiveChat = (props) => {
   const classes = useStyles();
   const { user } = props;
   const conversation = props.conversation || {};
+  const allMessages = conversation.messages;
+  const [convoMessages, setConvoMessages] = useState([]);
+  const [seeAllMessages, setSeeAllMessages] = useState(false)
+
+    useEffect(() => {
+      if (allMessages) {
+        const initialMessages = allMessages.slice(-11, -1)
+        setConvoMessages(initialMessages)
+      }
+    }, [allMessages]);
+
 
   return (
     <Box className={classes.root}>
@@ -34,7 +46,7 @@ const ActiveChat = (props) => {
           />
           <Box className={classes.chatContainer}>
             <Messages
-              messages={conversation.messages}
+              messages={convoMessages}
               otherUser={conversation.otherUser}
               userId={user.id}
               latestMessageId={conversation.latestMessageId}
