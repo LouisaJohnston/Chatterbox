@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { Box } from "@material-ui/core";
+import { Box, Button } from "@material-ui/core";
 import { Input, Header, Messages } from "./index";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
@@ -18,6 +18,9 @@ const useStyles = makeStyles(() => ({
     flexGrow: 1,
     justifyContent: "space-between",
   },
+  messagesButton: {
+    boxShadow: "0 2px 10px 0 rgba(88,133,196,0.05)",
+  }
 }));
 
 const ActiveChat = (props) => {
@@ -35,6 +38,10 @@ const ActiveChat = (props) => {
       }
     }, [allMessages]);
 
+    const handleClick = () => {
+      setConvoMessages(allMessages)
+    }
+
 
   return (
     <Box className={classes.root}>
@@ -45,6 +52,10 @@ const ActiveChat = (props) => {
             online={conversation.otherUser.online || false}
           />
           <Box className={classes.chatContainer}>
+            <Button
+              className={classes.messagesButton}
+              onClick={handleClick}
+            >Load All Messages</Button>
             <Messages
               messages={convoMessages}
               otherUser={conversation.otherUser}
