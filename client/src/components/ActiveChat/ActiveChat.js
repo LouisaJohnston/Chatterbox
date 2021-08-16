@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
   },
   messagesButton: {
     boxShadow: "0 2px 10px 0 rgba(88,133,196,0.05)",
-  }
+  },
 }));
 
 const ActiveChat = (props) => {
@@ -29,19 +29,19 @@ const ActiveChat = (props) => {
   const conversation = props.conversation || {};
   const allMessages = conversation.messages;
   const [convoMessages, setConvoMessages] = useState([]);
-  const [seeAllMessages, setSeeAllMessages] = useState(false)
+  const [seeAllMessages, setSeeAllMessages] = useState(false);
 
-    useEffect(() => {
-      if (allMessages) {
-        const initialMessages = allMessages.slice(-11, -1)
-        setConvoMessages(initialMessages)
-      }
-    }, [allMessages]);
-
-    const handleClick = () => {
-      setConvoMessages(allMessages)
+  useEffect(() => {
+    if (allMessages) {
+      const initialMessages = allMessages.slice(-11, -1);
+      setConvoMessages(initialMessages);
     }
+  }, [allMessages]);
 
+  const handleClick = () => {
+    setConvoMessages(allMessages);
+    setSeeAllMessages(true);
+  };
 
   return (
     <Box className={classes.root}>
@@ -52,10 +52,11 @@ const ActiveChat = (props) => {
             online={conversation.otherUser.online || false}
           />
           <Box className={classes.chatContainer}>
-            <Button
-              className={classes.messagesButton}
-              onClick={handleClick}
-            >Load All Messages</Button>
+          {!seeAllMessages && (
+            <Button className={classes.messagesButton} onClick={handleClick}>
+              Load All Messages
+            </Button>
+          )}
             <Messages
               messages={convoMessages}
               otherUser={conversation.otherUser}
