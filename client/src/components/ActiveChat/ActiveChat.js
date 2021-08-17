@@ -37,7 +37,7 @@ const ActiveChat = (props) => {
       setConvoMessages(initialMessages);
       setSeeAllMessages(false);
     }
-  }, [conversation.latestMessageId, allMessages])
+  }, [conversation.latestMessageId, allMessages]);
 
   const handleClick = () => {
     setConvoMessages(allMessages);
