@@ -139,7 +139,6 @@ export const putMarked = (conversation) => async (dispatch) => {
       )
       .forEach(async (message) => {
         if (message.senderId === conversation.otherUser.id && !message.seen) {
-          console.log("MEEP", message.id);
           openMessage(data);
           dispatch(setMarkedMessage(data));
           return true;
