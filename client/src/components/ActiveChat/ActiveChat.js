@@ -32,11 +32,12 @@ const ActiveChat = (props) => {
   const [seeAllMessages, setSeeAllMessages] = useState(false);
 
   useEffect(() => {
-    if (allMessages) {
-      const initialMessages = allMessages.slice(-11, -1);
+    if (conversation.latestMessageId) {
+      let initialMessages = allMessages.slice(-6);
       setConvoMessages(initialMessages);
+      setSeeAllMessages(false);
     }
-  }, [allMessages]);
+  }, [conversation.latestMessageId, allMessages])
 
   const handleClick = () => {
     setConvoMessages(allMessages);
@@ -52,11 +53,11 @@ const ActiveChat = (props) => {
             online={conversation.otherUser.online || false}
           />
           <Box className={classes.chatContainer}>
-          {!seeAllMessages && (
-            <Button className={classes.messagesButton} onClick={handleClick}>
-              Load All Messages
-            </Button>
-          )}
+            {!seeAllMessages && (
+              <Button className={classes.messagesButton} onClick={handleClick}>
+                Load All Messages
+              </Button>
+            )}
             <Messages
               messages={convoMessages}
               otherUser={conversation.otherUser}
