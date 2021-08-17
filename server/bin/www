@@ -10,7 +10,8 @@ require("dotenv").config();
 const { app, sessionStore } = require("../app");
 const http = require("http");
 const db = require("../db");
-const onlineUsers = require("../onlineUsers");
+const userSocketIdMap = require("../onlineUsers");
+const jwt = require("jsonwebtoken");
 
 /**
  * Get port from environment and store in Express.
@@ -31,17 +32,37 @@ const server = http.createServer(app);
 
 const io = require("socket.io")(server);
 
+io.use((socket, next) => {
+  if (socket.query && socket.query.token) {
+    jwt.verify(
+      socket.query.token,
+      process.env.SESSION_SECRET,
+      (err, decoded) => {
+        if (err) return next(new Error("Authentication error"));
+        socket.decoded = decoded;
+        next();
+      }
+    );
+  } else {
+    next(new Error("Authentication error"));
+  }
+});
 io.on("connection", (socket) => {
   socket.on("go-online", (id) => {
-    if (!onlineUsers.includes(id)) {
-      onlineUsers.push(id);
-    }
+    const addClientToMap = (id, socketId) => {
+      if (!userSocketIdMap.has(id)) {
+        userSocketIdMap.set(id, new Set([socketId]));
+      } else {
+        userSocketIdMap.get(id).add(socketId);
+      }
+    };
+    addClientToMap(id, socket.id);
     // send the user who just went online to everyone else who is already online
     socket.broadcast.emit("add-online-user", id);
   });
-
+  
   socket.on("new-message", (data) => {
-    socket.broadcast.emit("new-message", {
+    socket.to(socket.id).emit("new-message", {
       message: data.message,
       sender: data.sender,
     });
@@ -49,16 +70,22 @@ io.on("connection", (socket) => {
 
   socket.on("message-marked", (data) => {
     socket.broadcast.emit("message-marked", {
-      message: data
-    })
-  })
+      message: data,
+    });
+  });
 
   socket.on("logout", (id) => {
-    if (onlineUsers.includes(id)) {
-      userIndex = onlineUsers.indexOf(id);
-      onlineUsers.splice(userIndex, 1);
-      socket.broadcast.emit("remove-offline-user", id);
-    }
+    const removeClientFromMap = (id, socketId) => {
+      if (userSocketIdMap.has(id)) {
+        let userSocketIdSet = userSocketIdMap.get(id);
+        userSocketIdSet.delete(socketId);
+        if (userSocketIdSet.size === 0) {
+          userSocketIdMap.delete(id);
+          socket.broadcast.emit("remove-offline-user", id);
+        }
+      }
+    };
+    removeClientFromMap(id, socket.id);
   });
 });
 
