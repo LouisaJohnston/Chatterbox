@@ -128,31 +128,21 @@ const openMessage = (data) => {
 export const putMarked = (conversation) => async (dispatch) => {
   try {
     const data = await markMessages(conversation.id);
-    let convoMessages = conversation.messages;
-
+    let convoMessages = conversation.messages.slice().reverse();
     convoMessages
-    .slice()
-    .reverse()
-    .forEach(async (message) => {
-      if (message.senderId === conversation.otherUser.id && message.seen) {
-        return message.indexOf();
-      }
-    });
-
-    console.log(convoMessages)
-
-    convoMessages
-      .slice()
-      .reverse()
+      .slice(
+        0,
+        convoMessages.findIndex(
+          (message) =>
+            message.senderId === conversation.otherUser.id && message.seen
+        )
+      )
       .forEach(async (message) => {
-        console.log("BEEP", message.id)
         if (message.senderId === conversation.otherUser.id && !message.seen) {
+          console.log("MEEP", message.id);
           openMessage(data);
           dispatch(setMarkedMessage(data));
-        }
-        if (message.senderId === conversation.otherUser.id && message.seen) {
-          console.log("SHEEP", message.id)
-          return;
+          return true;
         }
       });
   } catch (error) {
