@@ -26,7 +26,9 @@ router.get("/", async (req, res, next) => {
           model: Message, 
           separate: true,
           attributes: ["messageId"],
+          as: "lastMessage",
           limit: 1,
+          required: false,
         },
         {
           model: User,
@@ -65,6 +67,8 @@ router.get("/", async (req, res, next) => {
       } else if (convoJSON.user2) {
         convoJSON.otherUser = convoJSON.user2;
         delete convoJSON.user2;
+      } else if (convoJSON.lastMessage) {
+        convoJSON.lastMessage = convoJSON.lastMessage;
       }
 
       // set property for online status of the other user
