@@ -73,6 +73,9 @@ export const logout = (id) => async (dispatch) => {
 export const fetchConversations = () => async (dispatch) => {
   try {
     const { data } = await axios.get("/api/conversations");
+    // console.log(data)
+    // const sortedData = data.sort((a, b) => a.latestMessageId - b.latestMessageId)
+    // console.log(sortedData)
     dispatch(gotConversations(data));
   } catch (error) {
     console.error(error);

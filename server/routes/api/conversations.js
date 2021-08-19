@@ -12,6 +12,7 @@ router.get("/", async (req, res, next) => {
       return res.sendStatus(401);
     }
     const userId = req.user.id;
+
     const conversations = await Conversation.findAll({
       where: {
         [Op.or]: {
@@ -20,16 +21,7 @@ router.get("/", async (req, res, next) => {
         },
       },
       attributes: ["id"],
-      order: [[Message, "createdAt", "ASC"], [Message, "createdAt", "ASC"]],
       include: [
-        {
-          model: Message, 
-          separate: true,
-          attributes: ["messageId"],
-          as: "lastMessage",
-          limit: 1,
-          required: false,
-        },
         {
           model: User,
           as: "user1",
@@ -60,6 +52,8 @@ router.get("/", async (req, res, next) => {
       const convo = conversations[i];
       const convoJSON = convo.toJSON();
 
+      console.log("DONKEY", convoJSON)
+
       // set a property "otherUser" so that frontend will have easier access
       if (convoJSON.user1) {
         convoJSON.otherUser = convoJSON.user1;
@@ -67,8 +61,6 @@ router.get("/", async (req, res, next) => {
       } else if (convoJSON.user2) {
         convoJSON.otherUser = convoJSON.user2;
         delete convoJSON.user2;
-      } else if (convoJSON.lastMessage) {
-        convoJSON.lastMessage = convoJSON.lastMessage;
       }
 
       // set property for online status of the other user
@@ -79,8 +71,15 @@ router.get("/", async (req, res, next) => {
       }
 
       // set properties for notification count and latest message preview
-      const convoMessages = convoJSON.messages;
+      const latestMessage = await Message.findAll({
+        limit: 1,
+        where: {
+          conversationId: convoJSON.id
+        },
+        order: [["createdAt", "DESC"]]
+      })
 
+      const messageJSON = latestMessage[0].toJSON()
 
       const getCount = await Message.count({
         where: {
@@ -92,14 +91,13 @@ router.get("/", async (req, res, next) => {
         },
       });
 
-      const latestMessage = convoMessages[convoMessages.length - 1];
-
       convoJSON.unSeenMessageCount = getCount;
-      convoJSON.latestMessageText = latestMessage.text;
-      convoJSON.latestMessageId = latestMessage.id;
+      convoJSON.latestMessageText = messageJSON.text;
+      convoJSON.latestMessageId = messageJSON.id;
       conversations[i] = convoJSON;
     }
-    res.json(conversations);
+    const sortedConvos = conversations.sort((a, b) => b.latestMessageId - a.latestMessageId)
+    res.json(sortedConvos);
   } catch (error) {
     next(error);
   }
