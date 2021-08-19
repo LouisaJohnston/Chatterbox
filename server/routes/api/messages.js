@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Conversation, Message } = require("../../db/models");
+const { findConversation } = require("../../db/models/conversation");
 const onlineUsers = require("../../onlineUsers");
 
 // expects {recipientId, text, conversationId } in body (conversationId will be null if no conversation exists yet)
@@ -39,6 +40,31 @@ router.post("/", async (req, res, next) => {
     res.json({ message, sender });
   } catch (error) {
     next(error);
+  }
+});
+
+router.get("/", async (req, res, next) => {
+  try {
+    if (!req.user) {
+      return res.sendStatus(401);
+    }
+    const senderId = req.user.id;
+    const { recipientId } = req.body;
+
+    const conversation = findConversation(
+      senderId,
+      recipientId
+    )
+
+    const convoMessages = conversation.getMessage()
+
+    console.log("Bloop", convoMessages)
+
+    
+    
+
+  } catch (error) {
+    next(error)
   }
 });
 
