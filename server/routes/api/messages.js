@@ -8,11 +8,12 @@ router.post("/", async (req, res, next) => {
     if (!req.user) {
       return res.sendStatus(401);
     }
-    const userId = req.user.id;
+    const senderId = req.user.id;
+    const { recipientId, text, conversationId, sender } = req.body;
 
     // find a conversation
     let conversation = await Conversation.findConversation(
-      userId,
+      senderId,
       recipientId
     );
 
@@ -82,7 +83,9 @@ router.get("/all/:otherUserId", async (req, res, next) => {
       user2
     )
     
-    const convoMessages = await conversation.getMessages();
+    const convoMessages = await conversation.getMessages({
+      order: [["createdAt", "ASC"]]
+    });
     res.json(convoMessages)
   } catch (error) {
     next(error)

@@ -36,14 +36,17 @@ const ActiveChat = (props) => {
   useEffect(() => {
     if (conversation.latestMessageId) {
       setConvoMessages(messages);
-      setSeeAllMessages(false);
     }
   }, [conversation.latestMessageId, messages]);
 
+  useEffect(() => {
+    setSeeAllMessages(false);
+  }, [conversation.id])
+
   const handleClick = () => {
-    fetchAllMessages(conversation.otherUser.id);
-    setConvoMessages(messages)
     setSeeAllMessages(true);
+    props.fetchAllMessages(conversation.otherUser.id);
+    setConvoMessages(messages)
   };
 
   return (
@@ -87,7 +90,6 @@ const mapStateToProps = (state) => {
         (conversation) =>
           conversation.otherUser.username === state.activeConversation
       ),
-    // conversations: state.conversation,
     messages: state.convoMessages,
   };
 };
