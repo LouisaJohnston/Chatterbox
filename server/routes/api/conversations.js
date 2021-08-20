@@ -68,11 +68,8 @@ router.get("/", async (req, res, next) => {
       }
 
       // set properties for notification count and latest message preview
-      const latestMessage = await Message.findAll({
+      const latestMessage = await convo.getMessages({
         limit: 1,
-        where: {
-          conversationId: convoJSON.id,
-        },
         order: [["createdAt", "DESC"]],
       });
 
