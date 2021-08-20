@@ -55,12 +55,9 @@ router.get("/initial/:otherUserId", async (req, res, next) => {
       user2
     )
 
-    const convoMessages = await Message.findAll({
-      where: {
-        conversationId: await conversation.id
-      },
+    const convoMessages = await conversation.getMessages({
+      order: [["createdAt", "DESC"]],
       limit: 5,
-      order: [["createdAt", "DESC"]]
     });
 
     const revMessages = convoMessages.reverse()
