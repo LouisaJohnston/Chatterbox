@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { Conversation, Message } = require("../../db/models");
-const { findConversation } = require("../../db/models/conversation");
 const onlineUsers = require("../../onlineUsers");
 
 // expects {recipientId, text, conversationId } in body (conversationId will be null if no conversation exists yet)
@@ -47,18 +46,15 @@ router.get("/:otherUserId", async (req, res, next) => {
     if (!req.user) {
       return res.sendStatus(401);
     }
-    console.log(req)
     const user1 = req.user.id;
     const user2 = parseInt(Object.values(req.params));
-
-    const conversation = findConversation(
+    
+    const conversation = await Conversation.findConversation(
       user1,
       user2
     )
-
-    const convoMessages = await conversation.getMessage()
-
-    console.log("Bloop", convoMessages)
+    
+    const convoMessages = await conversation.getMessages();
     res.json(convoMessages)
   } catch (error) {
     next(error)

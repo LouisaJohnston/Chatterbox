@@ -27,22 +27,21 @@ const ActiveChat = (props) => {
   const classes = useStyles();
   const { user } = props;
   const conversation = props.conversation || {};
-  // const allMessages = conversation.messages;
+  const messages = props.messages
   const [convoMessages, setConvoMessages] = useState([]);
   const [seeAllMessages, setSeeAllMessages] = useState(false);
 
 
-  console.log(conversation)
-  // useEffect(() => {
-  //   if (conversation.latestMessageId) {
-  //     let initialMessages = allMessages.slice(-6);
-  //     setConvoMessages(initialMessages);
-  //     setSeeAllMessages(false);
-  //   }
-  // }, [conversation.latestMessageId, allMessages]);
+  useEffect(() => {
+    if (conversation.latestMessageId) {
+      let initialMessages = messages.slice(-6);
+      setConvoMessages(initialMessages);
+      setSeeAllMessages(false);
+    }
+  }, [conversation.latestMessageId, messages]);
 
   const handleClick = () => {
-    // setConvoMessages(allMessages);
+    setConvoMessages(messages);
     setSeeAllMessages(true);
   };
 
@@ -87,6 +86,8 @@ const mapStateToProps = (state) => {
         (conversation) =>
           conversation.otherUser.username === state.activeConversation
       ),
+    // conversations: state.conversation,
+    messages: state.convoMessages,
   };
 };
 

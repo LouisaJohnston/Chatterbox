@@ -2,13 +2,13 @@ import axios from "axios";
 import socket from "../../socket";
 import {
   gotConversations,
-  gotMessages,
   addConversation,
   setNewMessage,
   setSearchedUsers,
   setMarkedMessage,
 } from "../conversations";
 import { gotUser, setFetchingStatus } from "../user";
+import { gotMessages } from "../convoMessages"
 
 axios.interceptors.request.use(async function (config) {
   const token = await localStorage.getItem("messenger-token");
@@ -83,7 +83,6 @@ export const fetchConversations = () => async (dispatch) => {
 
 export const fetchMessages = (otherUserId) => async (dispatch) => {
   try {
-    console.log("HAI")
     const { data } = await axios.get(`/api/messages/${otherUserId}`);
     dispatch(gotMessages(data))
   } catch (error) {

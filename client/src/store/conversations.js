@@ -10,7 +10,6 @@ import {
 // ACTIONS
 
 const GET_CONVERSATIONS = "GET_CONVERSATIONS";
-const GET_MESSAGES = "GET_MESSAGES"
 const SET_MESSAGE = "SET_MESSAGE";
 const ADD_ONLINE_USER = "ADD_ONLINE_USER";
 const REMOVE_OFFLINE_USER = "REMOVE_OFFLINE_USER";
@@ -27,13 +26,6 @@ export const gotConversations = (conversations) => {
     conversations,
   };
 };
-
-export const gotMessages = (messages) => {
-  return {
-    type: GET_MESSAGES,
-    messages,
-  }
-}
 
 export const setNewMessage = (message, sender) => {
   return {
@@ -90,8 +82,6 @@ const reducer = (state = [], action) => {
   switch (action.type) {
     case GET_CONVERSATIONS:
       return action.conversations;
-    case GET_MESSAGES:
-      return action.messages;
     case SET_MESSAGE:
       return addMessageToStore(state, action.payload);
     case SET_MARKED_MESSAGE:
