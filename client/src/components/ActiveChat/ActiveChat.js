@@ -3,6 +3,7 @@ import { Box, Button } from "@material-ui/core";
 import { Input, Header, Messages } from "./index";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
+import { fetchAllMessages } from "../../store/utils/thunkCreators";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -34,14 +35,14 @@ const ActiveChat = (props) => {
 
   useEffect(() => {
     if (conversation.latestMessageId) {
-      let initialMessages = messages.slice(-6);
-      setConvoMessages(initialMessages);
+      setConvoMessages(messages);
       setSeeAllMessages(false);
     }
   }, [conversation.latestMessageId, messages]);
 
   const handleClick = () => {
-    setConvoMessages(messages);
+    fetchAllMessages(conversation.otherUser.id);
+    setConvoMessages(messages)
     setSeeAllMessages(true);
   };
 
@@ -91,4 +92,12 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(ActiveChat);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchAllMessages: (id) => {
+      dispatch(fetchAllMessages(id))
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ActiveChat);

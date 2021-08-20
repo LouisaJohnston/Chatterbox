@@ -41,7 +41,35 @@ router.post("/", async (req, res, next) => {
   }
 });
 
-router.get("/:otherUserId", async (req, res, next) => {
+router.get("/initial/:otherUserId", async (req, res, next) => {
+  try {
+    if (!req.user) {
+      return res.sendStatus(401);
+    }
+    const user1 = req.user.id;
+    const user2 = parseInt(Object.values(req.params));
+    
+    const conversation = await Conversation.findConversation(
+      user1,
+      user2
+    )
+
+    const convoMessages = await Message.findAll({
+      where: {
+        conversationId: await conversation.id
+      },
+      limit: 5,
+      order: [["createdAt", "DESC"]]
+    });
+
+    const revMessages = convoMessages.reverse()
+    res.json(revMessages)
+  } catch (error) {
+    next(error)
+  }
+});
+
+router.get("/all/:otherUserId", async (req, res, next) => {
   try {
     if (!req.user) {
       return res.sendStatus(401);

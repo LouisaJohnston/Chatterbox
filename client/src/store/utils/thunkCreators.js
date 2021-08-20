@@ -73,7 +73,6 @@ export const logout = (id) => async (dispatch) => {
 
 export const fetchConversations = () => async (dispatch) => {
   try {
-    console.log("BAI")
     const { data } = await axios.get("/api/conversations");
     dispatch(gotConversations(data));
   } catch (error) {
@@ -81,9 +80,20 @@ export const fetchConversations = () => async (dispatch) => {
   }
 };
 
-export const fetchMessages = (otherUserId) => async (dispatch) => {
+export const fetchInitialMessages = (otherUserId) => async (dispatch) => {
   try {
-    const { data } = await axios.get(`/api/messages/${otherUserId}`);
+    const { data } = await axios.get(`/api/messages/initial/${otherUserId}`);
+    console.log(data)
+    dispatch(gotMessages(data))
+  } catch (error) {
+    console.log(error)
+  }
+};
+
+export const fetchAllMessages = (otherUserId) => async (dispatch) => {
+  try {
+    const { data } = await axios.get(`/api/messages/all/${otherUserId}`);
+    console.log(data)
     dispatch(gotMessages(data))
   } catch (error) {
     console.log(error)
