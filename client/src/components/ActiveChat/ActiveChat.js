@@ -98,7 +98,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllMessages: (id) => {
       dispatch(fetchAllMessages(id))
-    }
+    },
   };
 };
 

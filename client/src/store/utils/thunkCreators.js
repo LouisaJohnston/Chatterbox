@@ -3,12 +3,12 @@ import socket from "../../socket";
 import {
   gotConversations,
   addConversation,
-  setNewMessage,
+  setNewConvoMessage,
   setSearchedUsers,
   setMarkedMessage,
 } from "../conversations";
+import { gotMessages, setNewMessage } from "../convoMessages"
 import { gotUser, setFetchingStatus } from "../user";
-import { gotMessages } from "../convoMessages"
 
 axios.interceptors.request.use(async function (config) {
   const token = await localStorage.getItem("messenger-token");
@@ -83,7 +83,6 @@ export const fetchConversations = () => async (dispatch) => {
 export const fetchInitialMessages = (otherUserId) => async (dispatch) => {
   try {
     const { data } = await axios.get(`/api/messages/initial/${otherUserId}`);
-    console.log(data)
     dispatch(gotMessages(data))
   } catch (error) {
     console.log(error)
@@ -93,7 +92,6 @@ export const fetchInitialMessages = (otherUserId) => async (dispatch) => {
 export const fetchAllMessages = (otherUserId) => async (dispatch) => {
   try {
     const { data } = await axios.get(`/api/messages/all/${otherUserId}`);
-    console.log(data)
     dispatch(gotMessages(data))
   } catch (error) {
     console.log(error)
@@ -121,6 +119,7 @@ export const postMessage = (body) => async (dispatch) => {
     if (!body.conversationId) {
       dispatch(addConversation(body.recipientId, data.message));
     } else {
+      dispatch(setNewConvoMessage(data.message, data.sender));
       dispatch(setNewMessage(data.message, data.sender));
     }
     sendMessage(data, body);
