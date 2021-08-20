@@ -27,20 +27,22 @@ const ActiveChat = (props) => {
   const classes = useStyles();
   const { user } = props;
   const conversation = props.conversation || {};
-  const allMessages = conversation.messages;
+  // const allMessages = conversation.messages;
   const [convoMessages, setConvoMessages] = useState([]);
   const [seeAllMessages, setSeeAllMessages] = useState(false);
 
-  useEffect(() => {
-    if (conversation.latestMessageId) {
-      let initialMessages = allMessages.slice(-6);
-      setConvoMessages(initialMessages);
-      setSeeAllMessages(false);
-    }
-  }, [conversation.latestMessageId, allMessages]);
+
+  console.log(conversation)
+  // useEffect(() => {
+  //   if (conversation.latestMessageId) {
+  //     let initialMessages = allMessages.slice(-6);
+  //     setConvoMessages(initialMessages);
+  //     setSeeAllMessages(false);
+  //   }
+  // }, [conversation.latestMessageId, allMessages]);
 
   const handleClick = () => {
-    setConvoMessages(allMessages);
+    // setConvoMessages(allMessages);
     setSeeAllMessages(true);
   };
 

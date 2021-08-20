@@ -46,13 +46,12 @@ router.get("/", async (req, res, next) => {
         },
       ],
     });
-    
 
     for (let i = 0; i < conversations.length; i++) {
       const convo = conversations[i];
       const convoJSON = convo.toJSON();
 
-      console.log("DONKEY", convoJSON)
+      console.log("DONKEY", convoJSON);
 
       // set a property "otherUser" so that frontend will have easier access
       if (convoJSON.user1) {
@@ -74,12 +73,12 @@ router.get("/", async (req, res, next) => {
       const latestMessage = await Message.findAll({
         limit: 1,
         where: {
-          conversationId: convoJSON.id
+          conversationId: convoJSON.id,
         },
-        order: [["createdAt", "DESC"]]
-      })
+        order: [["createdAt", "DESC"]],
+      });
 
-      const messageJSON = latestMessage[0].toJSON()
+      const messageJSON = latestMessage[0].toJSON();
 
       const getCount = await Message.count({
         where: {
@@ -96,7 +95,9 @@ router.get("/", async (req, res, next) => {
       convoJSON.latestMessageId = messageJSON.id;
       conversations[i] = convoJSON;
     }
-    const sortedConvos = conversations.sort((a, b) => b.latestMessageId - a.latestMessageId)
+    const sortedConvos = conversations.sort(
+      (a, b) => b.latestMessageId - a.latestMessageId
+    );
     res.json(sortedConvos);
   } catch (error) {
     next(error);

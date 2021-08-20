@@ -2,6 +2,7 @@ import axios from "axios";
 import socket from "../../socket";
 import {
   gotConversations,
+  gotMessages,
   addConversation,
   setNewMessage,
   setSearchedUsers,
@@ -72,13 +73,21 @@ export const logout = (id) => async (dispatch) => {
 
 export const fetchConversations = () => async (dispatch) => {
   try {
+    console.log("BAI")
     const { data } = await axios.get("/api/conversations");
-    // console.log(data)
-    // const sortedData = data.sort((a, b) => a.latestMessageId - b.latestMessageId)
-    // console.log(sortedData)
     dispatch(gotConversations(data));
   } catch (error) {
     console.error(error);
+  }
+};
+
+export const fetchMessages = (otherUserId) => async (dispatch) => {
+  try {
+    console.log("HAI")
+    const { data } = await axios.get(`/api/messages/${otherUserId}`);
+    dispatch(gotMessages(data))
+  } catch (error) {
+    console.log(error)
   }
 };
 

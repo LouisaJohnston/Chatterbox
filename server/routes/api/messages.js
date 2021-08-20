@@ -9,12 +9,11 @@ router.post("/", async (req, res, next) => {
     if (!req.user) {
       return res.sendStatus(401);
     }
-    const senderId = req.user.id;
-    const { recipientId, text, conversationId, sender } = req.body;
+    const userId = req.user.id;
 
     // find a conversation
     let conversation = await Conversation.findConversation(
-      senderId,
+      userId,
       recipientId
     );
 
@@ -43,26 +42,24 @@ router.post("/", async (req, res, next) => {
   }
 });
 
-router.get("/", async (req, res, next) => {
+router.get("/:otherUserId", async (req, res, next) => {
   try {
     if (!req.user) {
       return res.sendStatus(401);
     }
-    const senderId = req.user.id;
-    const { recipientId } = req.body;
+    console.log(req)
+    const user1 = req.user.id;
+    const user2 = parseInt(Object.values(req.params));
 
     const conversation = findConversation(
-      senderId,
-      recipientId
+      user1,
+      user2
     )
 
-    const convoMessages = conversation.getMessage()
+    const convoMessages = await conversation.getMessage()
 
     console.log("Bloop", convoMessages)
-
-    
-    
-
+    res.json(convoMessages)
   } catch (error) {
     next(error)
   }
