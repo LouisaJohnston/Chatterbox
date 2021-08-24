@@ -12,6 +12,7 @@ router.get("/", async (req, res, next) => {
       return res.sendStatus(401);
     }
     const userId = req.user.id;
+
     const conversations = await Conversation.findAll({
       where: {
         [Op.or]: {
@@ -20,9 +21,7 @@ router.get("/", async (req, res, next) => {
         },
       },
       attributes: ["id"],
-      order: [[Message, "createdAt", "ASC"]],
       include: [
-        { model: Message, order: ["createdAt", "ASC"] },
         {
           model: User,
           as: "user1",
@@ -69,7 +68,12 @@ router.get("/", async (req, res, next) => {
       }
 
       // set properties for notification count and latest message preview
-      const convoMessages = convoJSON.messages;
+      const latestMessage = await convo.getMessages({
+        limit: 1,
+        order: [["createdAt", "DESC"]],
+      });
+
+      const messageJSON = latestMessage[0].toJSON();
 
       const getCount = await Message.count({
         where: {
@@ -81,14 +85,15 @@ router.get("/", async (req, res, next) => {
         },
       });
 
-      const latestMessage = convoMessages[convoMessages.length - 1];
-
       convoJSON.unSeenMessageCount = getCount;
-      convoJSON.latestMessageText = latestMessage.text;
-      convoJSON.latestMessageId = latestMessage.id;
+      convoJSON.latestMessageText = messageJSON.text;
+      convoJSON.latestMessageId = messageJSON.id;
       conversations[i] = convoJSON;
     }
-    res.json(conversations);
+    const sortedConvos = conversations.sort(
+      (a, b) => b.latestMessageId - a.latestMessageId
+    );
+    res.json(sortedConvos);
   } catch (error) {
     next(error);
   }
