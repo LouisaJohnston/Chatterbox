@@ -1,8 +1,11 @@
-# Messenger
+# Chatterbox
 
-A one-to-one realtime chat app.
+Chatterbox is a one-to-one realtime chat app built using Socket.IO, React, React Redux, Redux Thunk, PostgreSQL, and JavaScript.
 
-## Initial Setup
+## Images
+
+
+## Setup Instructions
 
 Create the PostgreSQL database (these instructions may need to be adapted for your operating system):
 
