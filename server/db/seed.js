@@ -38,11 +38,6 @@ async function seed() {
     senderId: thomas.id,
     text: "I'm from New York",
   });
-  await Message.create({
-    conversationId: santaigoConvo.id,
-    senderId: santiago.id,
-    text: "Share photo of your city, please",
-  });
 
   const chiumbo = await User.create({
     username: "chiumbo",
