@@ -7,7 +7,8 @@
     "dev": "nodemon ./bin/www",
     "debug": "nodemon  --inspect ./bin/www",
     "test": "NODE_ENV=test ./node_modules/.bin/mocha --exit --timeout 30000",
-    "seed": "node db/seed.js"
+    "seed": "node db/seed.js",
+    "heroku-postbuild": "npm install && cd client && npm install --only-dev && npm install && npm run build"
   },
   "dependencies": {
     "connect-session-sequelize": "^7.0.4",
