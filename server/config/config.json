@@ -1,10 +1,29 @@
 {
     "development": {
-      "database": "messenger",
-      "host": "127.0.0.1",
+      "database": {
+        "use_env_variable": "DATABASE_URL"
+      },
+      "host": {
+        "use_env_variable": "DATABASE_HOST"
+      },
+      "dialect": "postgres"
+    },
+    "test": {
+      "database": {
+        "use_env_variable": "DATABASE_URL"
+      },
+      "host": {
+        "use_env_variable": "DATABASE_HOST"
+      },
       "dialect": "postgres"
     },
     "production": {
-      "use_env_variable": "DATABASE_URL"
+      "database": {
+        "use_env_variable": "DATABASE_URL"
+      },
+      "host": {
+        "use_env_variable": "DATABASE_HOST"
+      },
+      "dialect": "postgres"
     }
 }
