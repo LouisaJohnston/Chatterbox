@@ -1,1 +1,1 @@
-nodemon ./bin/www
+npm start
