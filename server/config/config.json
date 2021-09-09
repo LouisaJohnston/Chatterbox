@@ -1,20 +1,18 @@
 {
   "development": {
     "dialect": "postgres",
-    "database": {
       "use_env_variable": "DATABASE_URL"
-    }
   },
   "test": {
     "dialect": "postgres",
-    "database": {
-      "use_env_variable": "DATABASE_URL"
-    }
+    "use_env_variable": "DATABASE_URL"
+  },
+  "local": {
+    "dialect": "postgres",
+    "use_env_variable": "DATABASE_URL"
   },
   "production": {
     "dialect": "postgres",
-    "database": {
-      "use_env_variable": "DATABASE_URL"
-    }
+    "use_env_variable": "DATABASE_URL"
   }
 }
