@@ -3,18 +3,27 @@
     "dialect": "postgres",
     "database": {
       "use_env_variable": "DATABASE_URL"
+    },
+    "host": {
+      "use_env_variable": "DATABASE_HOST"
     }
   },
   "test": {
     "dialect": "postgres",
     "database": {
       "use_env_variable": "DATABASE_URL"
+    },
+    "host": {
+      "use_env_variable": "DATABASE_HOST"
     }
   },
   "production": {
     "dialect": "postgres",
     "database": {
       "use_env_variable": "DATABASE_URL"
+    },
+    "host": {
+      "use_env_variable": "DATABASE_HOST"
     }
   }
 }
