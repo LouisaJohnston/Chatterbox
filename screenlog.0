@@ -1,0 +1,805 @@
+M[0m[23m[24m[J[38;5;237m---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[00m
+[38;5;032m~/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App[38;5;075m([38;5;078mmain[38;5;075m)[00m [38;5;105m»[00m code .[K[67C[31m127 ↵[00m [38;5;237mLouisaLathamJohnston@Louisas-MacBook-Pro[00m[113DM[0m[23m[24m[J[38;5;237m---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[00m
+[38;5;032m~/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App[38;5;075m([38;5;078mmain[38;5;214m*[00m[38;5;075m)[00m [38;5;105m»[00m code .[K[66C[31m127 ↵[00m [38;5;237mLouisaLathamJohnston@Louisas-MacBook-Pro[00m[112DM[0m[23m[24m[J[38;5;237m----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[00m
+[38;5;032m~/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App[38;5;075m([38;5;078mmain[38;5;214m*[00m[38;5;075m)[00m [38;5;105m»[00m code .[K[73C[31m127 ↵[00m [38;5;237mLouisaLathamJohnston@Louisas-MacBook-Pro[00m[119Dgit push origin main               g  hheroku local[?1l>[?2004l
+kheroku\[33m[WARN] Cannot read property '1' of null[0m
+[32m[OKAY] package.json file found - trying 'npm start'[0m
+[33m[WARN] Cannot read property '1' of null[0m
+[32m[OKAY] package.json file found - trying 'npm start'[0m
+[35m2:33:15 PM web.1 | [0m > start
+[35m2:33:15 PM web.1 | [0m > NODE_ENV=production concurrently "cd server && npm run dev" "cd client &&npm start"
+[35m2:33:16 PM web.1 | [0m [0] 
+[35m2:33:16 PM web.1 | [0m [0] > server@0.0.0 dev
+[35m2:33:16 PM web.1 | [0m [0] > nodemon ./bin/www
+[35m2:33:16 PM web.1 | [0m [0] 
+[35m2:33:16 PM web.1 | [0m [1] 
+[35m2:33:16 PM web.1 | [0m [1] > client@0.1.0 start
+[35m2:33:16 PM web.1 | [0m [1] > react-scripts start
+[35m2:33:16 PM web.1 | [0m [1] 
+[35m2:33:16 PM web.1 | [0m [0] [33m[nodemon] 2.0.9[39m
+[35m2:33:16 PM web.1 | [0m [0] [33m[nodemon] to restart at any time, enter `rs`[39m
+[35m2:33:16 PM web.1 | [0m [0] [33m[nodemon] watching path(s): *.*[39m
+[35m2:33:16 PM web.1 | [0m [0] [33m[nodemon] watching extensions: js,mjs,json[39m
+[35m2:33:16 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:33:17 PM web.1 | [0m [0] /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:172
+[35m2:33:17 PM web.1 | [0m [0]                 reject(new sequelizeErrors.ConnectionRefusedError(err));
+[35m2:33:17 PM web.1 | [0m [0]                        ^
+[35m2:33:17 PM web.1 | [0m [0] 
+[35m2:33:17 PM web.1 | [0m [0] ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED 76.103.88.157:5432
+[35m2:33:17 PM web.1 | [0m [0]     at Client._connectionCallback (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:172:24)
+[35m2:33:17 PM web.1 | [0m [0]     at Client._handleErrorWhileConnecting (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/client.js:305:19)
+[35m2:33:17 PM web.1 | [0m [0]     at Client._handleErrorEvent (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/client.js:315:19)
+[35m2:33:17 PM web.1 | [0m [0]     at Connection.emit (node:events:378:20)
+[35m2:33:17 PM web.1 | [0m     at Socket.reportStreamError (/Users/LouisaLath
+[35m2:33:17 PM web.1 | [0m amJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/connection.js:52:12)
+[35m2:33:17 PM web.1 | [0m [0]     at Socket.emit (node:events:378:20)
+[35m2:33:17 PM web.1 | [0m [0]     at emitErrorNT (node:internal/streams/destroy:188:8)
+[35m2:33:17 PM web.1 | [0m [0]     at emitErrorCloseNT (node:internal/streams/destroy:153:3)
+[35m2:33:17 PM web.1 | [0m [0]     at processTicksAndRejections (node:internal/process/task_queues:81:21) {
+[35m2:33:17 PM web.1 | [0m [0]   parent: Error: connect ECONNREFUSED 76.103.88.157:5432
+[35m2:33:17 PM web.1 | [0m [0]       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16) {
+[35m2:33:17 PM web.1 | [0m [0]     errno: -61,
+[35m2:33:17 PM web.1 | [0m [0]     code: 'ECONNREFUSED',
+[35m2:33:17 PM web.1 | [0m [0]     syscall: 'connect',
+[35m2:33:17 PM web.1 | [0m [0]     address: '76.103.88.157',
+[35m2:33:17 PM web.1 | [0m [0]     port: 5432
+[35m2:33:17 PM web.1 | [0m [0]   },
+[35m2:33:17 PM web.1 | [0m [0]   original: Error: connect ECONNREFUSED 76.103.88.157:5432
+[35m2:33:17 PM web.1 | [0m [0]       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16) {
+[35m2:33:17 PM web.1 | [0m [0]     errno: -61,
+[35m2:33:17 PM web.1 | [0m [0]     code: 'ECONNREFUSED',
+[35m2:33:17 PM web.1 | [0m [0]     syscall: 'connect',
+[35m2:33:17 PM web.1 | [0m [0]     address: '76.103.88.157',
+[35m2:33:17 PM web.1 | [0m [0]     port: 5432
+[35m2:33:17 PM web.1 | [0m [0]   }
+[35m2:33:17 PM web.1 | [0m [0] }
+[35m2:33:17 PM web.1 | [0m [0] 
+[35m2:33:17 PM web.1 | [0m [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:33:21 PM web.1 | [0m [1] [34mℹ[39m [90m｢wds｣[39m: Project is running at http://10.0.0.241/
+[35m2:33:21 PM web.1 | [0m [1] [34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[35m2:33:21 PM web.1 | [0m [1] [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/client/public
+[35m2:33:21 PM web.1 | [0m [1] [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[35m2:33:21 PM web.1 | [0m [1] Starting the development server...
+[35m2:33:21 PM web.1 | [0m [1] 
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^C[33m[WARN] Interrupted by User[0m
+[36m[DONE] Killing all processes with signal  SIGINT[0m
+
+[1m[3m%[23m[1m[0m                                                                                                                                                                                                          k..Messenger-App\[0m[23m[24m[J[38;5;237m----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[00m
+[38;5;032m~/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App[38;5;075m([38;5;078mmain[38;5;214m*[00m[38;5;075m)[00m [38;5;105m»[00m [K[79C[31m130 ↵[00m [38;5;237mLouisaLathamJohnston@Louisas-MacBook-Pro[00m[125D[?1h=[?2004h[35m2:33:33 PM web.1 | [0m [0] 
+[35m2:33:33 PM web.1 | [0m Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/term-size/vendor/macos/term-size: /Users/LouisaLathamJohnston/Desktop/Hire: No such file or directory
+[35m2:33:33 PM web.1 | [0m [0] 
+[35m2:33:33 PM web.1 | [0m cd server && npm run dev exited with code SIGINT
+[?2004l
+[1m[3m%[23m[1m[0m                                                                                                                                                                                                          k..Messenger-App\[0m[23m[24m[J[38;5;237m----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[00m
+[38;5;032m~/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App[38;5;075m([38;5;078mmain[38;5;214m*[00m[38;5;075m)[00m [38;5;105m»[00m [K[79C[31m130 ↵[00m [38;5;237mLouisaLathamJohnston@Louisas-MacBook-Pro[00m[125D[?1h=[?2004h[35m2:33:34 PM web.1 | [0m [1] cd client &&npm start exited with code SIGINT
+[35m2:33:34 PM web.1[0m [36mExited Successfully[0m
+^[OA^C[?2004l
+[1m[3m%[23m[1m[0m                                                                                                                                                                                                          k..Messenger-App\[0m[23m[24m[J[38;5;237m----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[00m
+[38;5;032m~/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App[38;5;075m([38;5;078mmain[38;5;214m*[00m[38;5;075m)[00m [38;5;105m»[00m [K[79C[31m130 ↵[00m [38;5;237mLouisaLathamJohnston@Louisas-MacBook-Pro[00m[125D[?1h=[?2004h[?2004l
+[1m[3m%[23m[1m[0m                                                                                                                                                                                                          k..Messenger-App\[0m[23m[24m[J[38;5;237m----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[00m
+[38;5;032m~/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App[38;5;075m([38;5;078mmain[38;5;214m*[00m[38;5;075m)[00m [38;5;105m»[00m [K[79C[31m130 ↵[00m [38;5;237mLouisaLathamJohnston@Louisas-MacBook-Pro[00m[125D[?1h=[?2004h[?2004l
+[1m[3m%[23m[1m[0m                                                                                                                                                                                                          k..Messenger-App\[0m[23m[24m[J[38;5;237m----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[00m
+[38;5;032m~/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App[38;5;075m([38;5;078mmain[38;5;214m*[00m[38;5;075m)[00m [38;5;105m»[00m [K[79C[31m130 ↵[00m [38;5;237mLouisaLathamJohnston@Louisas-MacBook-Pro[00m[125D[?1h=[?2004hheroku local[?1l>[?2004l
+kheroku\[33m[WARN] Cannot read property '1' of null[0m
+[32m[OKAY] package.json file found - trying 'npm start'[0m
+[33m[WARN] Cannot read property '1' of null[0m
+[32m[OKAY] package.json file found - trying 'npm start'[0m
+[35m2:33:42 PM web.1 | [0m > start
+[35m2:33:42 PM web.1 | [0m > NODE_ENV=production concurrently "cd server && npm run dev" "cd client &&npm start"
+[35m2:33:43 PM web.1 | [0m [1] 
+[35m2:33:43 PM web.1 | [0m [1] > client@0.1.0 start
+[35m2:33:43 PM web.1 | [0m [1] > react-scripts start
+[35m2:33:43 PM web.1 | [0m [1] 
+[35m2:33:43 PM web.1 | [0m [0] 
+[35m2:33:43 PM web.1 | [0m [0] > server@0.0.0 dev
+[35m2:33:43 PM web.1 | [0m [0] > nodemon ./bin/www
+[35m2:33:43 PM web.1 | [0m [0] 
+[35m2:33:43 PM web.1 | [0m [0] 
+[35m2:33:43 PM web.1 | [0m [33m[nodemon] 2.0.9[39m
+[35m2:33:43 PM web.1 | [0m [0] 
+[35m2:33:43 PM web.1 | [0m [33m[nodemon] to restart at any time, enter `rs`[39m
+[35m2:33:43 PM web.1 | [0m [0] [33m[nodemon] watching path(s): *.*[39m
+[35m2:33:43 PM web.1 | [0m [0] [33m[nodemon] watching extensions: js,mjs,json[39m
+[35m2:33:43 PM web.1 | [0m [0] 
+[35m2:33:43 PM web.1 | [0m [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:33:44 PM web.1 | [0m [0] 
+[35m2:33:44 PM web.1 | [0m /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:172
+[35m2:33:44 PM web.1 | [0m [0]                 reject(new sequelizeErrors.ConnectionRefusedError(err));
+[35m2:33:44 PM web.1 | [0m [0]                        ^
+[35m2:33:44 PM web.1 | [0m [0] 
+[35m2:33:44 PM web.1 | [0m [0] ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED 76.103.88.157:5432
+[35m2:33:44 PM web.1 | [0m [0]     at Client._connectionCallback (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:172:24)
+[35m2:33:44 PM web.1 | [0m [0]     at Client._handleErrorWhileConnecting (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/client.js:305:19)
+[35m2:33:44 PM web.1 | [0m [0]     at Client._handleErrorEvent (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/client.js:315:19)
+[35m2:33:44 PM web.1 | [0m [0]     at Connection.emit (node:events:378:20)
+[35m2:33:44 PM web.1 | [0m [0]     at Socket.reportStreamError (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/connection.js:52:12)
+[35m2:33:44 PM web.1 | [0m [0]     at Socket.emit (node:events:378:20)
+[35m2:33:44 PM web.1 | [0m [0]     at emitErrorNT (node:internal/streams/destroy:188:8)
+[35m2:33:44 PM web.1 | [0m [0]     at emitErrorCloseNT (node:internal/streams/destroy:153:3)
+[35m2:33:44 PM web.1 | [0m [0]     at processTicksAndRejections (node:internal/process/task_queues:81:21) {
+[35m2:33:44 PM web.1 | [0m [0]   parent: Error: connect ECONNREFUSED 76.103.88.157:5432
+[35m2:33:44 PM web.1 | [0m [0]       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16) {
+[35m2:33:44 PM web.1 | [0m [0]     errno: -61,
+[35m2:33:44 PM web.1 | [0m [0]     code: 'ECONNREFUSED',
+[35m2:33:44 PM web.1 | [0m [0]     syscall: 'connect',
+[35m2:33:44 PM web.1 | [0m [0]     address: '76.103.88.157',
+[35m2:33:44 PM web.1 | [0m [0]     port: 5432
+[35m2:33:44 PM web.1 | [0m [0]   },
+[35m2:33:44 PM web.1 | [0m [0]   original: Error: connect ECONNREFUSED 76.103.88.157:5432
+[35m2:33:44 PM web.1 | [0m [0]       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16) {
+[35m2:33:44 PM web.1 | [0m [0]     errno: -61,
+[35m2:33:44 PM web.1 | [0m [0]     code: 'ECONNREFUSED',
+[35m2:33:44 PM web.1 | [0m [0]     syscall: 'connect',
+[35m2:33:44 PM web.1 | [0m [0]     address: '76.103.88.157',
+[35m2:33:44 PM web.1 | [0m [0]     port: 5432
+[35m2:33:44 PM web.1 | [0m [0]   }
+[35m2:33:44 PM web.1 | [0m [0] }
+[35m2:33:44 PM web.1 | [0m [0] 
+[35m2:33:44 PM web.1 | [0m [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:33:46 PM web.1 | [0m [1] [34mℹ[39m [90m｢wds｣[39m: Project is running at http://10.0.0.241/
+[35m2:33:46 PM web.1 | [0m [1] [34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[35m2:33:46 PM web.1 | [0m [1] [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/client/public
+[35m2:33:46 PM web.1 | [0m [1] [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[35m2:33:46 PM web.1 | [0m [1] Starting the development server...
+[35m2:33:46 PM web.1 | [0m [1] 
+[35m2:33:58 PM web.1 | [0m [1] Compiled successfully!
+[35m2:33:58 PM web.1 | [0m [1] 
+[35m2:33:58 PM web.1 | [0m [1] You can now view client in the browser.
+[35m2:33:58 PM web.1 | [0m [1] 
+[35m2:33:58 PM web.1 | [0m [1]   Local:            http://localhost:5000
+[35m2:33:58 PM web.1 | [0m [1]   On Your Network:  http://10.0.0.241:5000
+[35m2:33:58 PM web.1 | [0m [1] 
+[35m2:33:58 PM web.1 | [0m [1] Note that the development build is not optimized.
+[35m2:33:58 PM web.1 | [0m [1] To create a production build, use npm run build.
+[35m2:33:58 PM web.1 | [0m [1] 
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[35m2:52:45 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:52:45 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:52:47 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:52:47 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:52:47 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:52:47 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:52:50 PM web.1 | [0m [0] 
+[35m2:52:50 PM web.1 | [0m /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/models/message.js:4
+[35m2:52:50 PM web.1 | [0m [0] const Message = db.define("message", {
+[35m2:52:50 PM web.1 | [0m [0]                    ^
+[35m2:52:50 PM web.1 | [0m [0] 
+[35m2:52:50 PM web.1 | [0m [0] TypeError: db.define is not a function
+[35m2:52:50 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/models/message.js:4:20)
+[35m2:52:50 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m2:52:50 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m2:52:50 PM web.1 | [0m [0]     at Module.load (node:internal/modules/cjs/loader:971:32)
+[35m2:52:50 PM web.1 | [0m [0]     at Function.Module._load (node:internal/modules/cjs/loader:812:14)
+[35m2:52:50 PM web.1 | [0m [0]     at Module.require (node:internal/modules/cjs/loader:995:19)
+[35m2:52:50 PM web.1 | [0m [0]     at require (node:internal/modules/cjs/helpers:92:18)
+[35m2:52:50 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/models/conversation.js:3:17)
+[35m2:52:50 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m2:52:50 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m2:52:50 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:52:52 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:52:52 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:52:54 PM web.1 | [0m [0] /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:172
+[35m2:52:54 PM web.1 | [0m [0]                 reject(new sequelizeErrors.ConnectionRefusedError(err));
+[35m2:52:54 PM web.1 | [0m [0]                        ^
+[35m2:52:54 PM web.1 | [0m [0] 
+[35m2:52:54 PM web.1 | [0m [0] ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED 76.103.88.157:5432
+[35m2:52:54 PM web.1 | [0m [0]     at Client._connectionCallback (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:172:24)
+[35m2:52:54 PM web.1 | [0m [0]     at Client._handleErrorWhileConnecting (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/client.js:305:19)
+[35m2:52:54 PM web.1 | [0m [0]     at Client._handleErrorEvent (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/client.js:315:19)
+[35m2:52:54 PM web.1 | [0m [0]     at Connection.emit (node:events:378:20)
+[35m2:52:54 PM web.1 | [0m     at Socket.reportStreamError (/Users/LouisaLath
+[35m2:52:54 PM web.1 | [0m amJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/connection.js:52:12)
+[35m2:52:54 PM web.1 | [0m [0]     at Socket.emit (node:events:378:20)
+[35m2:52:54 PM web.1 | [0m [0]     at emitErrorNT (node:internal/streams/destroy:188:8)
+[35m2:52:54 PM web.1 | [0m [0]     at emitErrorCloseNT (node:internal/streams/destroy:153:3)
+[35m2:52:54 PM web.1 | [0m [0]     at processTicksAndRejections (node:internal/process/task_queues:81:21) {
+[35m2:52:54 PM web.1 | [0m [0]   parent: Error: connect ECONNREFUSED 76.103.88.157:5432
+[35m2:52:54 PM web.1 | [0m [0]       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16) {
+[35m2:52:54 PM web.1 | [0m [0]     errno: -61,
+[35m2:52:54 PM web.1 | [0m [0]     code: 'ECONNREFUSED',
+[35m2:52:54 PM web.1 | [0m [0]     syscall: 'connect',
+[35m2:52:54 PM web.1 | [0m [0]     address: '76.103.88.157',
+[35m2:52:54 PM web.1 | [0m [0]     port: 5432
+[35m2:52:54 PM web.1 | [0m [0]   },
+[35m2:52:54 PM web.1 | [0m [0]   original: Error: connect ECONNREFUSED 76.103.88.157:5432
+[35m2:52:54 PM web.1 | [0m [0]       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16) {
+[35m2:52:54 PM web.1 | [0m [0]     errno: -61,
+[35m2:52:54 PM web.1 | [0m [0]     code: 'ECONNREFUSED',
+[35m2:52:54 PM web.1 | [0m [0]     syscall: 'connect',
+[35m2:52:54 PM web.1 | [0m [0]     address: '76.103.88.157',
+[35m2:52:54 PM web.1 | [0m [0]     port: 5432
+[35m2:52:54 PM web.1 | [0m [0]   }
+[35m2:52:54 PM web.1 | [0m [0] }
+[35m2:52:54 PM web.1 | [0m [0] 
+[35m2:52:54 PM web.1 | [0m [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:53:04 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:04 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:05 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:06 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:10 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m2:53:10 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m2:53:10 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m2:53:10 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "users" ("id"   SERIAL , "username" VARCHAR(255) NOT NULL UNIQUE, "email" VARCHAR(255) NOT NULL UNIQUE, "photoUrl" VARCHAR(255), "password" VARCHAR(255) NOT NULL, "salt" VARCHAR(255), "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+[35m2:53:10 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indke
+[35m2:53:10 PM web.1 |  > [0m y ORDER BY i.relname;
+[35m2:53:11 PM web.1 | [0m [0] 
+[35m2:53:11 PM web.1 | [0m Executing (default): CREATE TABLE IF NOT EXISTS "conversations" ("id"   SERIAL , "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "userId" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user1Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user2Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m2:53:11 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'conversations' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, 
+[35m2:53:11 PM web.1 |  > [0m ix.indkey ORDER BY i.relname;
+[35m2:53:11 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "messages" ("id"   SERIAL , "text" VARCHAR(255) NOT NULL, "senderId" INTEGER NOT NULL, "seen" BOOLEAN NOT NULL DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "conversationId" INTEGER REFERENCES "conversations" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m2:53:11 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'messages' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.in
+[35m2:53:11 PM web.1 |  > [0m dkey ORDER BY i.relname;
+[35m2:53:11 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m2:53:11 PM web.1 | [0m [0] 
+[35m2:53:11 PM web.1 | [0m Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey 
+[35m2:53:11 PM web.1 |  > [0m ORDER BY i.relname;
+[35m2:53:11 PM web.1 | [0m [0] Port 5000 is already in use
+[35m2:53:11 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:53:15 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:15 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:19 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:19 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:20 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:20 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:22 PM web.1 | [0m [0] 
+[35m2:53:22 PM web.1 | [0m /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:7
+[35m2:53:22 PM web.1 | [0m [0]     host: process.env.DATABASE_HOST
+[35m2:53:22 PM web.1 | [0m [0]         ^
+[35m2:53:22 PM web.1 | [0m [0] 
+[35m2:53:22 PM web.1 | [0m [0] SyntaxError: Unexpected token ':'
+[35m2:53:22 PM web.1 | [0m [0]     at Object.compileFunction (node:vm:355:18)
+[35m2:53:22 PM web.1 | [0m [0]     at wrapSafe (node:internal/modules/cjs/loader:1021:15)
+[35m2:53:22 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1055:27)
+[35m2:53:22 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m2:53:22 PM web.1 | [0m [0]     at Module.load (node:internal/modules/cjs/loader:971:32)
+[35m2:53:22 PM web.1 | [0m [0]     at Function.Module._load (node:internal/modules/cjs/loader:812:14)
+[35m2:53:22 PM web.1 | [0m [0]     at Module.require (node:internal/modules/cjs/loader:995:19)
+[35m2:53:22 PM web.1 | [0m [0]     at require (node:internal/modules/cjs/helpers:92:18)
+[35m2:53:22 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/index.js:1:12)
+[35m2:53:22 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m2:53:22 PM web.1 | [0m [0] 
+[35m2:53:22 PM web.1 | [0m [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:53:26 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:26 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:28 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:28 PM web.1 | [0m [0] 
+[35m2:53:28 PM web.1 | [0m [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:31 PM web.1 | [0m [0] 
+[35m2:53:31 PM web.1 | [0m /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:7
+[35m2:53:31 PM web.1 | [0m [0]     host: process.env.DATABASE_HOST
+[35m2:53:31 PM web.1 | [0m [0]     ^^^^
+[35m2:53:31 PM web.1 | [0m [0] 
+[35m2:53:31 PM web.1 | [0m [0] SyntaxError: Unexpected identifier
+[35m2:53:31 PM web.1 | [0m [0]     at Object.compileFunction (node:vm:355:18)
+[35m2:53:31 PM web.1 | [0m [0]     at wrapSafe (node:internal/modules/cjs/loader:1021:15)
+[35m2:53:31 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1055:27)
+[35m2:53:31 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m2:53:31 PM web.1 | [0m [0]     at Module.load (node:internal/modules/cjs/loader:971:32)
+[35m2:53:31 PM web.1 | [0m [0]     at Function.Module._load (node:internal/modules/cjs/loader:812:14)
+[35m2:53:31 PM web.1 | [0m [0]     at Module.require (node:internal/modules/cjs/loader:995:19)
+[35m2:53:31 PM web.1 | [0m [0]     at require (node:internal/modules/cjs/helpers:92:18)
+[35m2:53:31 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/index.js:1:12)
+[35m2:53:31 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m2:53:31 PM web.1 | [0m [0] 
+[35m2:53:31 PM web.1 | [0m [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:53:31 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:31 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:33 PM web.1 | [0m [0] 
+[35m2:53:33 PM web.1 | [0m /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:7
+[35m2:53:33 PM web.1 | [0m [0]     host: process.env.DATABASE_HOST
+[35m2:53:33 PM web.1 | [0m [0]     ^^^^
+[35m2:53:33 PM web.1 | [0m [0] 
+[35m2:53:33 PM web.1 | [0m [0] SyntaxError: Unexpected identifier
+[35m2:53:33 PM web.1 | [0m [0]     at Object.compileFunction (node:vm:355:18)
+[35m2:53:33 PM web.1 | [0m [0]     at wrapSafe (node:internal/modules/cjs/loader:1021:15)
+[35m2:53:33 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1055:27)
+[35m2:53:33 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m2:53:33 PM web.1 | [0m [0]     at Module.load (node:internal/modules/cjs/loader:971:32)
+[35m2:53:33 PM web.1 | [0m [0]     at Function.Module._load (node:internal/modules/cjs/loader:812:14)
+[35m2:53:33 PM web.1 | [0m [0]     at Module.require (node:internal/modules/cjs/loader:995:19)
+[35m2:53:33 PM web.1 | [0m [0]     at require (node:internal/modules/cjs/helpers:92:18)
+[35m2:53:33 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/index.js:1:12)
+[35m2:53:33 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m2:53:33 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:53:34 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:34 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:34 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:34 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:39 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m2:53:39 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m2:53:39 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m2:53:39 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "users" ("id"   SERIAL , "username" VARCHAR(255) NOT NULL UNIQUE, "email" VARCHAR(255) NOT NULL UNIQUE, "photoUrl" VARCHAR(255), "password" VARCHAR(255) NOT NULL, "salt" VARCHAR(255), "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+[35m2:53:39 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indke
+[35m2:53:39 PM web.1 |  > [0m y ORDER BY i.relname;
+[35m2:53:40 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "conversations" ("id"   SERIAL , "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "userId" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user1Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user2Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m2:53:40 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'conversations' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, 
+[35m2:53:40 PM web.1 |  > [0m ix.indkey ORDER BY i.relname;
+[35m2:53:40 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "messages" ("id"   SERIAL , "text" VARCHAR(255) NOT NULL, "senderId" INTEGER NOT NULL, "seen" BOOLEAN NOT NULL DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "conversationId" INTEGER REFERENCES "conversations" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m2:53:40 PM web.1 | [0m [0] 
+[35m2:53:40 PM web.1 | [0m Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'messages' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey
+[35m2:53:40 PM web.1 |  > [0m  ORDER BY i.relname;
+[35m2:53:40 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m2:53:40 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m2:53:40 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m2:53:40 PM web.1 | [0m [0] Port 5000 is already in use
+[35m2:53:40 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:53:41 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:41 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:41 PM web.1 | [0m [0] 
+[35m2:53:41 PM web.1 | [0m [32m[nodemon] restarting due to changes...[39m
+[35m2:53:41 PM web.1 | [0m [0] 
+[35m2:53:41 PM web.1 | [0m [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:44 PM web.1 | [0m [0] 
+[35m2:53:44 PM web.1 | [0m [32m[nodemon] restarting due to changes...[39m
+[35m2:53:44 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:48 PM web.1 | [0m [0] /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:8
+[35m2:53:48 PM web.1 | [0m [0]     host: process.env.DATABASE_HOST
+[35m2:53:48 PM web.1 | [0m [0]     ^^^^
+[35m2:53:48 PM web.1 | [0m [0] 
+[35m2:53:48 PM web.1 | [0m [0] SyntaxError: Unexpected identifier
+[35m2:53:48 PM web.1 | [0m [0]     at Object.compileFunction (node:vm:355:18)
+[35m2:53:48 PM web.1 | [0m [0]     at wrapSafe (node:internal/modules/cjs/loader:1021:15)
+[35m2:53:48 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1055:27)
+[35m2:53:48 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m2:53:48 PM web.1 | [0m [0]     at Module.load (node:internal/modules/cjs/loader:971:32)
+[35m2:53:48 PM web.1 | [0m [0]     at Function.Module._load (node:internal/modules/cjs/loader:812:14)
+[35m2:53:48 PM web.1 | [0m [0]     at Module.require (node:internal/modules/cjs/loader:995:19)
+[35m2:53:48 PM web.1 | [0m [0]     at require (node:internal/modules/cjs/helpers:92:18)
+[35m2:53:48 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/index.js:1:12)
+[35m2:53:48 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m2:53:48 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:53:48 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:48 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:50 PM web.1 | [0m [0] /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:8
+[35m2:53:50 PM web.1 | [0m [0]     host: process.env.DATABASE_HOST
+[35m2:53:50 PM web.1 | [0m [0]         ^
+[35m2:53:50 PM web.1 | [0m [0] 
+[35m2:53:50 PM web.1 | [0m [0] SyntaxError: Unexpected token ':'
+[35m2:53:50 PM web.1 | [0m [0]     at Object.compileFunction (node:vm:355:18)
+[35m2:53:50 PM web.1 | [0m [0]     at wrapSafe (node:internal/modules/cjs/loader:1021:15)
+[35m2:53:50 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1055:27)
+[35m2:53:50 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m2:53:50 PM web.1 | [0m [0]     at Module.load (node:internal/modules/cjs/loader:971:32)
+[35m2:53:50 PM web.1 | [0m [0]     at Function.Module._load (node:internal/modules/cjs/loader:812:14)
+[35m2:53:50 PM web.1 | [0m [0]     at Module.require (node:internal/modules/cjs/loader:995:19)
+[35m2:53:50 PM web.1 | [0m [0]     at require (node:internal/modules/cjs/helpers:92:18)
+[35m2:53:50 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/index.js:1:12)
+[35m2:53:50 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m2:53:50 PM web.1 | [0m [0] 
+[35m2:53:50 PM web.1 | [0m [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:53:53 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:53 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:54 PM web.1 | [0m [0] 
+[35m2:53:54 PM web.1 | [0m [32m[nodemon] restarting due to changes...[39m
+[35m2:53:54 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:53:58 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:53:58 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:54:00 PM web.1 | [0m [0] 
+[35m2:54:00 PM web.1 | [0m /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:7
+[35m2:54:00 PM web.1 | [0m [0]     port: process.env. ,
+[35m2:54:00 PM web.1 | [0m [0]                        ^
+[35m2:54:00 PM web.1 | [0m [0] 
+[35m2:54:00 PM web.1 | [0m [0] SyntaxError: Unexpected token ','
+[35m2:54:00 PM web.1 | [0m [0]     at Object.compileFunction (node:vm:355:18)
+[35m2:54:00 PM web.1 | [0m [0]     at wrapSafe (node:internal/modules/cjs/loader:1021:15)
+[35m2:54:00 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1055:27)
+[35m2:54:00 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m2:54:00 PM web.1 | [0m [0]     at Module.load (node:internal/modules/cjs/loader:971:32)
+[35m2:54:00 PM web.1 | [0m [0]     at Function.Module._load (node:internal/modules/cjs/loader:812:14)
+[35m2:54:00 PM web.1 | [0m [0]     at Module.require (node:internal/modules/cjs/loader:995:19)
+[35m2:54:00 PM web.1 | [0m [0]     at require (node:internal/modules/cjs/helpers:92:18)
+[35m2:54:00 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/index.js:1:12)
+[35m2:54:00 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m2:54:00 PM web.1 | [0m [0] 
+[35m2:54:00 PM web.1 | [0m [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:54:03 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:54:03 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:54:05 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:54:05 PM web.1 | [0m [0] 
+[35m2:54:05 PM web.1 | [0m [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:54:11 PM web.1 | [0m [0] 
+[35m2:54:11 PM web.1 | [0m Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m2:54:11 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m2:54:11 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m2:54:11 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "users" ("id"   SERIAL , "username" VARCHAR(255) NOT NULL UNIQUE, "email" VARCHAR(255) NOT NULL UNIQUE, "photoUrl" VARCHAR(255), "password" VARCHAR(255) NOT NULL, "salt" VARCHAR(255), "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+[35m2:54:11 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indke
+[35m2:54:11 PM web.1 |  > [0m y ORDER BY i.relname;
+[35m2:54:12 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "conversations" ("id"   SERIAL , "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "userId" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user1Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user2Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m2:54:12 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'conversations' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, 
+[35m2:54:12 PM web.1 |  > [0m ix.indkey ORDER BY i.relname;
+[35m2:54:12 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "messages" ("id"   SERIAL , "text" VARCHAR(255) NOT NULL, "senderId" INTEGER NOT NULL, "seen" BOOLEAN NOT NULL DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "conversationId" INTEGER REFERENCES "conversations" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m2:54:12 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'messages' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.in
+[35m2:54:12 PM web.1 |  > [0m dkey ORDER BY i.relname;
+[35m2:54:12 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m2:54:12 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m2:54:12 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m2:54:12 PM web.1 | [0m [0] Port 5000 is already in use
+[35m2:54:12 PM web.1 | [0m [0] 
+[35m2:54:12 PM web.1 | [0m [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:54:31 PM web.1 | [0m [0] 
+[35m2:54:31 PM web.1 | [0m [32m[nodemon] restarting due to changes...[39m
+[35m2:54:31 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:54:35 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:54:35 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:54:38 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m2:54:38 PM web.1 | [0m [0] 
+[35m2:54:38 PM web.1 | [0m Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey 
+[35m2:54:38 PM web.1 |  > [0m ORDER BY i.relname;
+[35m2:54:38 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "users" ("id"   SERIAL , "username" VARCHAR(255) NOT NULL UNIQUE, "email" VARCHAR(255) NOT NULL UNIQUE, "photoUrl" VARCHAR(255), "password" VARCHAR(255) NOT NULL, "salt" VARCHAR(255), "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+[35m2:54:38 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indke
+[35m2:54:38 PM web.1 |  > [0m y ORDER BY i.relname;
+[35m2:54:38 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "conversations" ("id"   SERIAL , "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "userId" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user1Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user2Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m2:54:38 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'conversations' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, 
+[35m2:54:38 PM web.1 |  > [0m ix.indkey ORDER BY i.relname;
+[35m2:54:39 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "messages" ("id"   SERIAL , "text" VARCHAR(255) NOT NULL, "senderId" INTEGER NOT NULL, "seen" BOOLEAN NOT NULL DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "conversationId" INTEGER REFERENCES "conversations" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m2:54:39 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'messages' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.in
+[35m2:54:39 PM web.1 |  > [0m dkey ORDER BY i.relname;
+[35m2:54:39 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m2:54:39 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m2:54:39 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m2:54:39 PM web.1 | [0m [0] Port 5000 is already in use
+[35m2:54:39 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m2:54:41 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:54:41 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:54:45 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m2:54:45 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m2:54:45 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m2:54:45 PM web.1 | [0m [0] 
+[35m2:54:45 PM web.1 | [0m Executing (default): CREATE TABLE IF NOT EXISTS "users" ("id"   SERIAL , "username" VARCHAR(255) NOT NULL UNIQUE, "email" VARCHAR(255) NOT NULL UNIQUE, "photoUrl" VARCHAR(255), "password" VARCHAR(255) NOT NULL, "salt" VARCHAR(255), "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+[35m2:54:45 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indke
+[35m2:54:45 PM web.1 |  > [0m y ORDER BY i.relname;
+[35m2:54:46 PM web.1 | [0m [0] 
+[35m2:54:46 PM web.1 | [0m Executing (default): CREATE TABLE IF NOT EXISTS "conversations" ("id"   SERIAL , "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "userId" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user1Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user2Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m2:54:46 PM web.1 | [0m [0] 
+[35m2:54:46 PM web.1 | [0m Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'conversations' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.i
+[35m2:54:46 PM web.1 |  > [0m ndkey ORDER BY i.relname;
+[35m2:54:46 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "messages" ("id"   SERIAL , "text" VARCHAR(255) NOT NULL, "senderId" INTEGER NOT NULL, "seen" BOOLEAN NOT NULL DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "conversationId" INTEGER REFERENCES "conversations" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m2:54:46 PM web.1 | [0m [0] 
+[35m2:54:46 PM web.1 | [0m Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'messages' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey
+[35m2:54:46 PM web.1 |  > [0m  ORDER BY i.relname;
+[35m2:54:46 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m2:54:46 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m2:54:46 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m2:54:46 PM web.1 | [0m [0] 
+[35m2:54:46 PM web.1 | [0m Listening on port 5000
+[35m2:54:47 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:54:47 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:54:47 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:54:47 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:54:50 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m2:54:50 PM web.1 | [0m [0] 
+[35m2:54:50 PM web.1 | [0m (node:58693) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+[35m2:54:50 PM web.1 | [0m [0] (Use `node --trace-deprecation ...` to show where the warning was created)
+[35m2:54:50 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m2:54:53 PM web.1 | [0m [0] 
+[35m2:54:53 PM web.1 | [0m (node:58710) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+[35m2:54:53 PM web.1 | [0m [0] (Use `node --trace-deprecation ...` to show where the warning was created)
+[35m2:54:55 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m2:54:55 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m2:54:55 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m2:54:55 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "users" ("id"   SERIAL , "username" VARCHAR(255) NOT NULL UNIQUE, "email" VARCHAR(255) NOT NULL UNIQUE, "photoUrl" VARCHAR(255), "password" VARCHAR(255) NOT NULL, "salt" VARCHAR(255), "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+[35m2:54:55 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indke
+[35m2:54:55 PM web.1 |  > [0m y ORDER BY i.relname;
+[35m2:54:55 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "conversations" ("id"   SERIAL , "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "userId" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user1Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user2Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m2:54:55 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'conversations' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, 
+[35m2:54:55 PM web.1 |  > [0m ix.indkey ORDER BY i.relname;
+[35m2:54:55 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "messages" ("id"   SERIAL , "text" VARCHAR(255) NOT NULL, "senderId" INTEGER NOT NULL, "seen" BOOLEAN NOT NULL DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "conversationId" INTEGER REFERENCES "conversations" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m2:54:55 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'messages' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.in
+[35m2:54:55 PM web.1 |  > [0m dkey ORDER BY i.relname;
+[35m2:54:55 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m2:54:55 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m2:54:55 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m2:54:56 PM web.1 | [0m [0] Port 5000 is already in use
+[35m2:54:56 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m3:02:25 PM web.1 | [0m [0] 
+[35m3:02:25 PM web.1 | [0m [32m[nodemon] restarting due to changes...[39m
+[35m3:02:25 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:02:26 PM web.1 | [0m [0] /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:14
+[35m3:02:26 PM web.1 | [0m [0] const db = new Sequelize(process.env.DATABASE_URL, process.env.DATABASE_USER, process.env.DATABASE_PASSWORD, {
+[35m3:02:26 PM web.1 | [0m [0]       ^
+[35m3:02:26 PM web.1 | [0m [0] 
+[35m3:02:26 PM web.1 | [0m [0] SyntaxError: Identifier 'db' has already been declared
+[35m3:02:26 PM web.1 | [0m [0]     at Object.compileFunction (node:vm:355:18)
+[35m3:02:26 PM web.1 | [0m [0]     at wrapSafe (node:internal/modules/cjs/loader:1021:15)
+[35m3:02:26 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1055:27)
+[35m3:02:26 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m3:02:26 PM web.1 | [0m [0]     at Module.load (node:internal/modules/cjs/loader:971:32)
+[35m3:02:26 PM web.1 | [0m [0]     at Function.Module._load (node:internal/modules/cjs/loader:812:14)
+[35m3:02:26 PM web.1 | [0m [0]     at Module.require (node:internal/modules/cjs/loader:995:19)
+[35m3:02:26 PM web.1 | [0m [0]     at require (node:internal/modules/cjs/helpers:92:18)
+[35m3:02:26 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/index.js:1:12)
+[35m3:02:26 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m3:02:26 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m3:02:30 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:02:30 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:02:32 PM web.1 | [0m [0] /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:172
+[35m3:02:32 PM web.1 | [0m [0]                 reject(new sequelizeErrors.ConnectionRefusedError(err));
+[35m3:02:32 PM web.1 | [0m [0]                        ^
+[35m3:02:32 PM web.1 | [0m [0] 
+[35m3:02:32 PM web.1 | [0m [0] ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED 76.103.88.157:5432
+[35m3:02:32 PM web.1 | [0m [0]     at Client._connectionCallback (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:172:24)
+[35m3:02:32 PM web.1 | [0m [0]     at Client._handleErrorWhileConnecting (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/client.js:305:19)
+[35m3:02:32 PM web.1 | [0m [0]     at Client._handleErrorEvent (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/client.js:315:19)
+[35m3:02:32 PM web.1 | [0m [0]     at Connection.emit (node:events:378:20)
+[35m3:02:32 PM web.1 | [0m     at Socket.reportStreamError (/Users/LouisaLath
+[35m3:02:32 PM web.1 | [0m amJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/connection.js:52:12)
+[35m3:02:32 PM web.1 | [0m [0]     at Socket.emit (node:events:378:20)
+[35m3:02:32 PM web.1 | [0m [0]     at emitErrorNT (node:internal/streams/destroy:188:8)
+[35m3:02:32 PM web.1 | [0m [0]     at emitErrorCloseNT (node:internal/streams/destroy:153:3)
+[35m3:02:32 PM web.1 | [0m [0]     at processTicksAndRejections (node:internal/process/task_queues:81:21) {
+[35m3:02:32 PM web.1 | [0m [0]   parent: Error: connect ECONNREFUSED 76.103.88.157:5432
+[35m3:02:32 PM web.1 | [0m [0]       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16) {
+[35m3:02:32 PM web.1 | [0m [0]     errno: -61,
+[35m3:02:32 PM web.1 | [0m [0]     code: 'ECONNREFUSED',
+[35m3:02:32 PM web.1 | [0m [0]     syscall: 'connect',
+[35m3:02:32 PM web.1 | [0m [0]     address: '76.103.88.157',
+[35m3:02:32 PM web.1 | [0m [0]     port: 5432
+[35m3:02:32 PM web.1 | [0m [0]   },
+[35m3:02:32 PM web.1 | [0m [0]   original: Error: connect ECONNREFUSED 76.103.88.157:5432
+[35m3:02:32 PM web.1 | [0m [0]       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16) {
+[35m3:02:32 PM web.1 | [0m [0]     errno: -61,
+[35m3:02:32 PM web.1 | [0m [0]     code: 'ECONNREFUSED',
+[35m3:02:32 PM web.1 | [0m [0]     syscall: 'connect',
+[35m3:02:32 PM web.1 | [0m [0]     address: '76.103.88.157',
+[35m3:02:32 PM web.1 | [0m [0]     port: 5432
+[35m3:02:32 PM web.1 | [0m [0]   }
+[35m3:02:32 PM web.1 | [0m [0] }
+[35m3:02:32 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m3:02:54 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:02:54 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:02:55 PM web.1 | [0m [0] 
+[35m3:02:55 PM web.1 | [0m /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:14
+[35m3:02:55 PM web.1 | [0m [0] const db = new Sequelize(process.env.DATABASE_URL {
+[35m3:02:55 PM web.1 | [0m [0]                                      ^^^^^^^^^^^^
+[35m3:02:55 PM web.1 | [0m [0] 
+[35m3:02:55 PM web.1 | [0m [0] SyntaxError: missing ) after argument list
+[35m3:02:55 PM web.1 | [0m [0]     at Object.compileFunction (node:vm:355:18)
+[35m3:02:55 PM web.1 | [0m [0]     at wrapSafe (node:internal/modules/cjs/loader:1021:15)
+[35m3:02:55 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1055:27)
+[35m3:02:55 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m3:02:55 PM web.1 | [0m [0]     at Module.load (node:internal/modules/cjs/loader:971:32)
+[35m3:02:55 PM web.1 | [0m [0]     at Function.Module._load (node:internal/modules/cjs/loader:812:14)
+[35m3:02:55 PM web.1 | [0m [0]     at Module.require (node:internal/modules/cjs/loader:995:19)
+[35m3:02:55 PM web.1 | [0m [0]     at require (node:internal/modules/cjs/helpers:92:18)
+[35m3:02:55 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/index.js:1:12)
+[35m3:02:55 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m3:02:55 PM web.1 | [0m [0] 
+[35m3:02:55 PM web.1 | [0m [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m3:02:55 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:02:55 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:02:58 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m3:02:58 PM web.1 | [0m [0] 
+[35m3:02:58 PM web.1 | [0m Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey 
+[35m3:02:58 PM web.1 |  > [0m ORDER BY i.relname;
+[35m3:02:59 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "users" ("id"   SERIAL , "username" VARCHAR(255) NOT NULL UNIQUE, "email" VARCHAR(255) NOT NULL UNIQUE, "photoUrl" VARCHAR(255), "password" VARCHAR(255) NOT NULL, "salt" VARCHAR(255), "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+[35m3:02:59 PM web.1 | [0m [0] 
+[35m3:02:59 PM web.1 | [0m Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey OR
+[35m3:02:59 PM web.1 |  > [0m DER BY i.relname;
+[35m3:02:59 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "conversations" ("id"   SERIAL , "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "userId" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user1Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user2Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m3:02:59 PM web.1 | [0m [0] 
+[35m3:02:59 PM web.1 | [0m Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'conversations' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.i
+[35m3:02:59 PM web.1 |  > [0m ndkey ORDER BY i.relname;
+[35m3:02:59 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "messages" ("id"   SERIAL , "text" VARCHAR(255) NOT NULL, "senderId" INTEGER NOT NULL, "seen" BOOLEAN NOT NULL DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "conversationId" INTEGER REFERENCES "conversations" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m3:02:59 PM web.1 | [0m [0] 
+[35m3:02:59 PM web.1 | [0m Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'messages' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey
+[35m3:02:59 PM web.1 |  > [0m  ORDER BY i.relname;
+[35m3:02:59 PM web.1 | [0m [0] 
+[35m3:02:59 PM web.1 | [0m Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m3:02:59 PM web.1 | [0m [0] 
+[35m3:02:59 PM web.1 | [0m Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey 
+[35m3:02:59 PM web.1 |  > [0m ORDER BY i.relname;
+[35m3:02:59 PM web.1 | [0m [0] Port 5000 is already in use
+[35m3:02:59 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m3:03:48 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:03:48 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:03:48 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:03:48 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:03:51 PM web.1 | [0m [0] 
+[35m3:03:51 PM web.1 | [0m /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:172
+[35m3:03:51 PM web.1 | [0m [0]                 reject(new sequelizeErrors.ConnectionRefusedError(err));
+[35m3:03:51 PM web.1 | [0m [0]                        ^
+[35m3:03:51 PM web.1 | [0m [0] 
+[35m3:03:51 PM web.1 | [0m [0] ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED 76.103.88.157:5432
+[35m3:03:51 PM web.1 | [0m [0]     at Client._connectionCallback (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:172:24)
+[35m3:03:51 PM web.1 | [0m [0]     at Client._handleErrorWhileConnecting (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/client.js:305:19)
+[35m3:03:51 PM web.1 | [0m [0]     at Client._handleErrorEvent (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/client.js:315:19)
+[35m3:03:51 PM web.1 | [0m [0]     at Connection.emit (node:events:378:20)
+[35m3:03:51 PM web.1 | [0m [0]     at Socket.reportStreamError (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/connection.js:52:12)
+[35m3:03:51 PM web.1 | [0m [0]     at Socket.emit (node:events:378:20)
+[35m3:03:51 PM web.1 | [0m [0]     at emitErrorNT (node:internal/streams/destroy:188:8)
+[35m3:03:51 PM web.1 | [0m [0]     at emitErrorCloseNT (node:internal/streams/destroy:153:3)
+[35m3:03:51 PM web.1 | [0m [0]     at processTicksAndRejections (node:internal/process/task_queues:81:21) {
+[35m3:03:51 PM web.1 | [0m [0]   parent: Error: connect ECONNREFUSED 76.103.88.157:5432
+[35m3:03:51 PM web.1 | [0m [0]       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16) {
+[35m3:03:51 PM web.1 | [0m [0]     errno: -61,
+[35m3:03:51 PM web.1 | [0m [0]     code: 'ECONNREFUSED',
+[35m3:03:51 PM web.1 | [0m [0]     syscall: 'connect',
+[35m3:03:51 PM web.1 | [0m [0]     address: '76.103.88.157',
+[35m3:03:51 PM web.1 | [0m [0]     port: 5432
+[35m3:03:51 PM web.1 | [0m [0]   },
+[35m3:03:51 PM web.1 | [0m [0]   original: Error: connect ECONNREFUSED 76.103.88.157:5432
+[35m3:03:51 PM web.1 | [0m [0]       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16) {
+[35m3:03:51 PM web.1 | [0m [0]     errno: -61,
+[35m3:03:51 PM web.1 | [0m [0]     code: 'ECONNREFUSED',
+[35m3:03:51 PM web.1 | [0m [0]     syscall: 'connect',
+[35m3:03:51 PM web.1 | [0m [0]     address: '76.103.88.157',
+[35m3:03:51 PM web.1 | [0m [0]     port: 5432
+[35m3:03:51 PM web.1 | [0m [0]   }
+[35m3:03:51 PM web.1 | [0m [0] }
+[35m3:03:51 PM web.1 | [0m [0] 
+[35m3:03:51 PM web.1 | [0m [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m3:05:18 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:05:18 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:05:19 PM web.1 | [0m [0] /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:19
+[35m3:05:19 PM web.1 | [0m [0] module.exports = db;
+[35m3:05:19 PM web.1 | [0m [0]                  ^
+[35m3:05:19 PM web.1 | [0m [0] 
+[35m3:05:19 PM web.1 | [0m [0] ReferenceError: db is not defined
+[35m3:05:19 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:19:18)
+[35m3:05:19 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m3:05:19 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m3:05:19 PM web.1 | [0m [0]     at Module.load (node:internal/modules/cjs/loader:971:32)
+[35m3:05:19 PM web.1 | [0m [0]     at Function.Module._load (node:internal/modules/cjs/loader:812:14)
+[35m3:05:19 PM web.1 | [0m [0]     at Module.require (node:internal/modules/cjs/loader:995:19)
+[35m3:05:19 PM web.1 | [0m [0]     at require (node:internal/modules/cjs/helpers:92:18)
+[35m3:05:19 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/index.js:1:12)
+[35m3:05:19 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m3:05:19 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m3:05:19 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m3:44:40 PM web.1 | [0m [0] 
+[35m3:44:40 PM web.1 | [0m [32m[nodemon] restarting due to changes...[39m
+[35m3:44:40 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:44:42 PM web.1 | [0m [0] /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:24
+[35m3:44:42 PM web.1 | [0m [0] module.exports = db;
+[35m3:44:42 PM web.1 | [0m [0]                  ^
+[35m3:44:42 PM web.1 | [0m [0] 
+[35m3:44:42 PM web.1 | [0m [0] ReferenceError: db is not defined
+[35m3:44:42 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:24:18)
+[35m3:44:42 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m3:44:42 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m3:44:42 PM web.1 | [0m [0]     at Module.load (node:internal/modules/cjs/loader:971:32)
+[35m3:44:42 PM web.1 | [0m [0]     at Function.Module._load (node:internal/modules/cjs/loader:812:14)
+[35m3:44:42 PM web.1 | [0m [0]     at Module.require (node:internal/modules/cjs/loader:995:19)
+[35m3:44:42 PM web.1 | [0m [0]     at require (node:internal/modules/cjs/helpers:92:18)
+[35m3:44:42 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/index.js:1:12)
+[35m3:44:42 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m3:44:42 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m3:44:42 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m3:44:48 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:44:48 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:44:48 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:44:49 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:44:53 PM web.1 | [0m [0] /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:172
+[35m3:44:53 PM web.1 | [0m [0]                 reject(new sequelizeErrors.ConnectionRefusedError(err));
+[35m3:44:53 PM web.1 | [0m [0]                        ^
+[35m3:44:53 PM web.1 | [0m [0] 
+[35m3:44:53 PM web.1 | [0m [0] ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED 76.103.88.157:5432
+[35m3:44:53 PM web.1 | [0m [0]     at Client._connectionCallback (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:172:24)
+[35m3:44:53 PM web.1 | [0m [0]     at Client._handleErrorWhileConnecting (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/client.js:305:19)
+[35m3:44:53 PM web.1 | [0m [0]     at Client._handleErrorEvent (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/client.js:315:19)
+[35m3:44:53 PM web.1 | [0m [0]     at Connection.emit (node:events:378:20)
+[35m3:44:53 PM web.1 | [0m     at Socket.reportStreamError (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/pg/lib/connection.js:52:12)
+[35m3:44:53 PM web.1 | [0m [0]     at Socket.emit (node:events:378:20)
+[35m3:44:53 PM web.1 | [0m [0]     at emitErrorNT (node:internal/streams/destroy:188:8)
+[35m3:44:53 PM web.1 | [0m [0]     at emitErrorCloseNT (node:internal/streams/destroy:153:3)
+[35m3:44:53 PM web.1 | [0m [0]     at processTicksAndRejections (node:internal/process/task_queues:81:21) {
+[35m3:44:53 PM web.1 | [0m [0]   parent: Error: connect ECONNREFUSED 76.103.88.157:5432
+[35m3:44:53 PM web.1 | [0m [0]       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16) {
+[35m3:44:53 PM web.1 | [0m [0]     errno: -61,
+[35m3:44:53 PM web.1 | [0m [0]     code: 'ECONNREFUSED',
+[35m3:44:53 PM web.1 | [0m [0]     syscall: 'connect',
+[35m3:44:53 PM web.1 | [0m [0]     address: '76.103.88.157',
+[35m3:44:53 PM web.1 | [0m [0]     port: 5432
+[35m3:44:53 PM web.1 | [0m [0]   },
+[35m3:44:53 PM web.1 | [0m [0]   original: Error: connect ECONNREFUSED 76.103.88.157:5432
+[35m3:44:53 PM web.1 | [0m [0]       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16) {
+[35m3:44:53 PM web.1 | [0m [0]     errno: -61,
+[35m3:44:53 PM web.1 | [0m [0]     code: 'ECONNREFUSED',
+[35m3:44:53 PM web.1 | [0m [0]     syscall: 'connect',
+[35m3:44:53 PM web.1 | [0m [0]     address: '76.103.88.157',
+[35m3:44:53 PM web.1 | [0m [0]     port: 5432
+[35m3:44:53 PM web.1 | [0m [0]   }
+[35m3:44:53 PM web.1 | [0m [0] }
+[35m3:44:53 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m3:45:02 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:45:02 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:45:02 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:45:03 PM web.1 | [0m [0] 
+[35m3:45:03 PM web.1 | [0m [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:45:06 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m3:45:06 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m3:45:06 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m3:45:06 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "users" ("id"   SERIAL , "username" VARCHAR(255) NOT NULL UNIQUE, "email" VARCHAR(255) NOT NULL UNIQUE, "photoUrl" VARCHAR(255), "password" VARCHAR(255) NOT NULL, "salt" VARCHAR(255), "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+[35m3:45:06 PM web.1 | [0m [0] 
+[35m3:45:06 PM web.1 | [0m Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey OR
+[35m3:45:06 PM web.1 |  > [0m DER BY i.relname;
+[35m3:45:07 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "conversations" ("id"   SERIAL , "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "userId" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user1Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user2Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m3:45:07 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'conversations' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, 
+[35m3:45:07 PM web.1 |  > [0m ix.indkey ORDER BY i.relname;
+[35m3:45:07 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "messages" ("id"   SERIAL , "text" VARCHAR(255) NOT NULL, "senderId" INTEGER NOT NULL, "seen" BOOLEAN NOT NULL DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "conversationId" INTEGER REFERENCES "conversations" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m3:45:07 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'messages' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.in
+[35m3:45:07 PM web.1 |  > [0m dkey ORDER BY i.relname;
+[35m3:45:07 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m3:45:07 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m3:45:07 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m3:45:07 PM web.1 | [0m [0] Listening on port 5000
+[35m3:45:26 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:45:26 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:45:31 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m3:45:31 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m3:45:31 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m3:45:31 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "users" ("id"   SERIAL , "username" VARCHAR(255) NOT NULL UNIQUE, "email" VARCHAR(255) NOT NULL UNIQUE, "photoUrl" VARCHAR(255), "password" VARCHAR(255) NOT NULL, "salt" VARCHAR(255), "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+[35m3:45:31 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indke
+[35m3:45:31 PM web.1 |  > [0m y ORDER BY i.relname;
+[35m3:45:31 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "conversations" ("id"   SERIAL , "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "userId" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user1Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, "user2Id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m3:45:31 PM web.1 | [0m [0] 
+[35m3:45:31 PM web.1 | [0m Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'conversations' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.i
+[35m3:45:31 PM web.1 |  > [0m ndkey ORDER BY i.relname;
+[35m3:45:31 PM web.1 | [0m [0] Executing (default): CREATE TABLE IF NOT EXISTS "messages" ("id"   SERIAL , "text" VARCHAR(255) NOT NULL, "senderId" INTEGER NOT NULL, "seen" BOOLEAN NOT NULL DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, "conversationId" INTEGER REFERENCES "conversations" ("id") ON DELETE SET NULL ON UPDATE CASCADE, PRIMARY KEY ("id"));
+[35m3:45:31 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'messages' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.in
+[35m3:45:31 PM web.1 |  > [0m dkey ORDER BY i.relname;
+[35m3:45:31 PM web.1 | [0m [0] 
+[35m3:45:31 PM web.1 | [0m Executing (default): CREATE TABLE IF NOT EXISTS "Session" ("sid" VARCHAR(36) , "expires" TIMESTAMP WITH TIME ZONE, "data" TEXT, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("sid"));
+[35m3:45:32 PM web.1 | [0m [0] Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Session' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.ind
+[35m3:45:32 PM web.1 |  > [0m key ORDER BY i.relname;
+[35m3:45:32 PM web.1 | [0m [0] Port 5000 is already in use
+[35m3:45:32 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m3:46:31 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:46:31 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:46:32 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:46:33 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:46:35 PM web.1 | [0m [0] 
+[35m3:46:35 PM web.1 | [0m /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:23
+[35m3:46:35 PM web.1 | [0m [0]     logging: 
+[35m3:46:35 PM web.1 | [0m [0]     ^^^^^^^
+[35m3:46:35 PM web.1 | [0m [0] 
+[35m3:46:35 PM web.1 | [0m [0] SyntaxError: Unexpected identifier
+[35m3:46:35 PM web.1 | [0m [0]     at Object.compileFunction (node:vm:355:18)
+[35m3:46:35 PM web.1 | [0m [0]     at wrapSafe (node:internal/modules/cjs/loader:1021:15)
+[35m3:46:35 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1055:27)
+[35m3:46:35 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m3:46:35 PM web.1 | [0m [0]     at Module.load (node:internal/modules/cjs/loader:971:32)
+[35m3:46:35 PM web.1 | [0m [0]     at Function.Module._load (node:internal/modules/cjs/loader:812:14)
+[35m3:46:35 PM web.1 | [0m [0]     at Module.require (node:internal/modules/cjs/loader:995:19)
+[35m3:46:35 PM web.1 | [0m [0]     at require (node:internal/modules/cjs/helpers:92:18)
+[35m3:46:35 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/index.js:1:12)
+[35m3:46:35 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m3:46:35 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m3:50:55 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:50:55 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:50:57 PM web.1 | [0m [0] /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/db.js:24
+[35m3:50:57 PM web.1 | [0m [0] })
+[35m3:50:57 PM web.1 | [0m [0] ^
+[35m3:50:57 PM web.1 | [0m [0] 
+[35m3:50:57 PM web.1 | [0m [0] SyntaxError: Unexpected token '}'
+[35m3:50:57 PM web.1 | [0m [0]     at Object.compileFunction (node:vm:355:18)
+[35m3:50:57 PM web.1 | [0m [0]     at wrapSafe (node:internal/modules/cjs/loader:1021:15)
+[35m3:50:57 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1055:27)
+[35m3:50:57 PM web.1 | [0m [0]     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1120:10)
+[35m3:50:57 PM web.1 | [0m [0]     at Module.load (node:internal/modules/cjs/loader:971:32)
+[35m3:50:57 PM web.1 | [0m [0]     at Function.Module._load (node:internal/modules/cjs/loader:812:14)
+[35m3:50:57 PM web.1 | [0m [0]     at Module.require (node:internal/modules/cjs/loader:995:19)
+[35m3:50:57 PM web.1 | [0m [0]     at require (node:internal/modules/cjs/helpers:92:18)
+[35m3:50:57 PM web.1 | [0m [0]     at Object.<anonymous> (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/db/index.js:1:12)
+[35m3:50:57 PM web.1 | [0m [0]     at Module._compile (node:internal/modules/cjs/loader:1091:14)
+[35m3:50:57 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m3:51:13 PM web.1 | [0m [0] [32m[nodemon] restarting due to changes...[39m
+[35m3:51:13 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:51:18 PM web.1 | [0m [0] /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/sequelize.js:1177
+[35m3:51:18 PM web.1 | [0m [0]       options.logging(...args);
+[35m3:51:18 PM web.1 | [0m [0]               ^
+[35m3:51:18 PM web.1 | [0m [0] 
+[35m3:51:18 PM web.1 | [0m [0] TypeError: options.logging is not a function
+[35m3:51:18 PM web.1 | [0m [0]     at Sequelize.log (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/sequelize.js:1177:15)
+[35m3:51:18 PM web.1 | [0m [0]     at Query._logQuery (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/abstract/query.js:352:22)
+[35m3:51:18 PM web.1 | [0m [0]     at Query.run (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/postgres/query.js:73:27)
+[35m3:51:18 PM web.1 | [0m [0]     at /Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/sequelize.js:619:28
+[35m3:51:18 PM web.1 | [0m [0]     at processTicksAndRejections (node:internal/process/task_queues:94:5)
+[35m3:51:18 PM web.1 | [0m [0]     at async PostgresQueryInterface.createTable (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:225:12)
+[35m3:51:18 PM web.1 | [0m [0]     at async Function.sync (/Users/LouisaLathamJohnston/Desktop/Hire Me/technical_assessment/chatterbox/LJ-Messenger-App/server/node_modules/sequelize/lib/model.js:1300:5)
+[35m3:51:18 PM web.1 | [0m [0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[35m3:51:20 PM web.1 | [0m [0] 
+[35m3:51:20 PM web.1 | [0m [32m[nodemon] restarting due to changes...[39m
+[35m3:51:20 PM web.1 | [0m [0] [32m[nodemon] starting `node ./bin/www`[39m
+[35m3:51:21 PM web.1 | [0m [0] 
+[35m3:51:26 PM web.1 | [0m [0] Listening on port 5000
