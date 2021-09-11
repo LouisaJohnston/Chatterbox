@@ -1,9 +1,16 @@
 {
   "name": "chatterbox",
   "version": "0.2.1",
+  "main": "server/app.js",
   "scripts": {
-    "start": "concurrently \"cd server && npm run dev\" \"cd client &&npm start\"",
-    "heroku-postbuild": "npm install && cd server && npm install && cd ../client && npm install --only-dev && npm install && npm run build"
+    "heroku-postbuild": "npm run build --prefix client",
+    "install": "npm --prefix server install server && npm --prefix client instalx client",
+    "dev server": "npm install --prefix server start",
+    "dex client": "npm install --prefix client start",
+    "sequelize": "npm run --prefix server sequelize",
+    "sequelize-cli": "npm run --prefix server sequelize-cli",
+    "start": "npm start --prefix server",
+    "runDev": "concurrently \"cd server && npm run dev\" \"cd client &&npm start\""
   },
   "devDependencies": {
     "concurrently": "^6.2.1"
