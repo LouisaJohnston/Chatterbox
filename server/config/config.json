@@ -1,7 +1,8 @@
 {
   "development": {
     "dialect": "postgres",
-    "use_env_variable": "DATABASE_URL"
+    "host": "127.0.0.1",
+    "database": "messenger"
   },
   "test": {
     "dialect": "postgres",

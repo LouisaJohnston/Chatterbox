@@ -1,10 +1,11 @@
 {
   "name": "chatterbox",
+  "version": "0.2.1",
   "scripts": {
-    "start": "NODE_ENV=production concurrently \"cd server && npm run dev\" \"cd client &&npm start\"",
+    "start": "concurrently \"cd server && npm run dev\" \"cd client &&npm start\"",
     "heroku-postbuild": "npm install && cd server && npm install && cd ../client && npm install --only-dev && npm install && npm run build"
   },
-  "dependencies": {
+  "devDependencies": {
     "concurrently": "^6.2.1"
   }
 }
