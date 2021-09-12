@@ -4,7 +4,7 @@
   "main": "server/app.js",
   "scripts": {
     "heroku-postbuild": "npm run build --prefix client",
-    "install": "npm --prefix server install server && npm --prefix client instalx client",
+    "install": "npm --prefix server install server && npm --prefix client install client",
     "dev server": "npm install --prefix server start",
     "dex client": "npm install --prefix client start",
     "sequelize": "npm run --prefix server sequelize",

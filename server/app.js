@@ -13,23 +13,11 @@ const sessionStore = new SequelizeStore({ db });
 const { json, urlencoded } = express;
 
 const app = express();
-const router = require("express").Router();
 
 app.use(logger("dev"));
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "../client", "build")));
-// app.use(express.static("../client"));
-
-// app.use(express.static(join(__dirname, "public")));
-// app.use(express.static(join(__dirname, "../client", "build", "index.html")));
-
-// router.get('/', (req, res) => {
-//   res.sendFile(
-//     path.resolve(__dirname, "../client", "build", "index.html")
-//   );
-// });
-// router.use(express.static(path.resolve("../client/build")));
 
 app.use(function (req, res, next) {
   const token = req.headers["x-access-token"];
