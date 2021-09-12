@@ -1,6 +1,7 @@
 const createError = require("http-errors");
 const express = require("express");
 const { join } = require("path");
+const path = require("path");
 const logger = require("morgan");
 const jwt = require("jsonwebtoken");
 const session = require("express-session");
@@ -9,19 +10,29 @@ const db = require("./db");
 const { User } = require("./db/models");
 // create store for sessions to persist in database
 const sessionStore = new SequelizeStore({ db });
-
 const { json, urlencoded } = express;
 
 const app = express();
+const router = require("express").Router();
 
 app.use(logger("dev"));
 app.use(json());
 app.use(urlencoded({ extended: false }));
-app.use(express.static(join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "../client", "build")));
+// app.use(express.static("../client"));
+
+// app.use(express.static(join(__dirname, "public")));
+// app.use(express.static(join(__dirname, "../client", "build", "index.html")));
+
+// router.get('/', (req, res) => {
+//   res.sendFile(
+//     path.resolve(__dirname, "../client", "build", "index.html")
+//   );
+// });
+// router.use(express.static(path.resolve("../client/build")));
 
 app.use(function (req, res, next) {
   const token = req.headers["x-access-token"];
-  console.log(token)
   if (token) {
     jwt.verify(token, process.env.SESSION_SECRET, (err, decoded) => {
       if (err) {
@@ -38,6 +49,10 @@ app.use(function (req, res, next) {
     return next();
   }
 });
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client", "build", "index.html"))
+})
 
 // require api routes here after I create them
 app.use("/auth", require("./routes/auth"));

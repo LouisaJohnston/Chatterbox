@@ -9,8 +9,6 @@
     "sequelize": "sequelize",
     "sequelize-cli": "sequelize-cli",
     "start": "nodemon ./bin/www",
-    "start:development": "nodemon -r dotenv/config ./bin/www",
-    "start:production": "node ./bin/www",
     "dev": "nodemon ./bin/www",
     "debug": "nodemon  --inspect ./bin/www",
     "test": "NODE_ENV=test ./node_modules/.bin/mocha --exit --timeout 30000",
