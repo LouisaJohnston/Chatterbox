@@ -1,13 +1,23 @@
 # Chatterbox
 
-Chatterbox is a one-to-one realtime chat app built using Socket.IO, React, React Redux, Redux Thunk, PostgreSQL, and JavaScript. This app was created as part of a group project.
+Chatterbox is a one-to-one realtime chat app built using Socket.IO, React, React Redux, Redux Thunk, Express.js PostgreSQL, and JavaScript. This app was created as part of a group project.
+
+View the live site here: https://chatterbox-messenger.herokuapp.com/
+
+To test the app, login with either of these accounts:
+
+username: thomas  
+pw: 123456
+
+username: hualing  
+pw: 123456
 
 
 ## Images
-See conversations with other users with notification counts:
+See conversations with notification counts:
 ![Login](screenshots/login.png)
 
-Initially only load the most recent messages in the conversation:
+For efficiency, initially only load the most recent messages in the conversation:
 ![Five Messages](screenshots/fivemessages.png)
 
 Option to load full conversation history: 
@@ -56,7 +66,13 @@ socket.on("logout", (id) => {
 });
 ```
 
-## Setup Instructions
+## To-Do
+* Add new conversation
+* Additional styling on register/login
+* Mobile-responsive
+* Show ellipses in chat/active chat preview if a user is typing
+
+## Local Setup Instructions
 
 Create the PostgreSQL database (these instructions may need to be adapted for your operating system):
 
@@ -91,23 +107,8 @@ npm install
 
 ### Running the Application Locally
 
-In one terminal, start the front end:
+In the root directory:
 
 ```
-cd client
-npm start
+npm run runDev
 ```
-
-In a separate terminal, start the back end:
-
-```
-cd server
-npm run dev
-```
-To test the app, login with either of these accounts:
-
-username: thomas  
-pw: 123456
-
-username: hualing  
-pw: 123456

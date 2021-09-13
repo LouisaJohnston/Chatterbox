@@ -1,6 +1,5 @@
 const createError = require("http-errors");
 const express = require("express");
-const { join } = require("path");
 const path = require("path");
 const logger = require("morgan");
 const jwt = require("jsonwebtoken");
@@ -39,8 +38,8 @@ app.use(function (req, res, next) {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client", "build", "index.html"))
-})
+  res.sendFile(path.join(__dirname, "../client", "build", "index.html"));
+});
 
 // require api routes here after I create them
 app.use("/auth", require("./routes/auth"));
