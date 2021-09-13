@@ -1,6 +1,6 @@
 # Chatterbox
 
-Chatterbox is a one-to-one realtime chat app built using Socket.IO, React, React Redux, Redux Thunk, Express.js PostgreSQL, and JavaScript. This app was created as part of a group project.
+Chatterbox is a one-to-one realtime chat app built using Socket.IO, React, React Redux, Redux Thunk, Express.js, PostgreSQL, and JavaScript. This app was created as part of a group project.
 
 View the live site here: https://chatterbox-messenger.herokuapp.com/
 
